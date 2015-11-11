@@ -1,0 +1,260 @@
+<?xml version="1.0" encoding="utf-8"?>
+<manifest android:versionCode="492" android:versionName="4.9.2" package="fm.qingting.qtradio"
+  xmlns:android="http://schemas.android.com/apk/res/android">
+    <uses-permission android:name="android.permission.SYSTEM_ALERT_WINDOW" />
+    <uses-permission android:name="android.permission.GET_TASKS" />
+    <uses-permission android:name="android.permission.INTERNET" />
+    <uses-permission android:name="android.permission.ACCESS_NETWORK_STATE" />
+    <uses-permission android:name="android.permission.RAISED_THREAD_PRIORITY" />
+    <uses-permission android:name="android.permission.READ_LOGS" />
+    <uses-permission android:name="android.permission.READ_PHONE_STATE" />
+    <uses-permission android:name="android.permission.RECEIVE_BOOT_COMPLETED" />
+    <uses-permission android:name="android.permission.PROCESS_OUTGOING_CALLS" />
+    <uses-permission android:name="android.permission.WRITE_EXTERNAL_STORAGE" />
+    <uses-permission android:name="android.permission.RECORD_AUDIO" />
+    <uses-permission android:name="android.permission.ACCESS_WIFI_STATE" />
+    <uses-permission android:name="android.permission.CHANGE_WIFI_STATE" />
+    <uses-permission android:name="android.permission.VIBRATE" />
+    <uses-permission android:name="android.permission.READ_PHONE_STATE" />
+    <uses-permission android:name="android.permission.PROCESS_OUTGOING_CALLS" />
+    <uses-permission android:name="com.motorola.android.permission.USEFMRADIO" />
+    <uses-permission android:name="android.permission.WAKE_LOCK" />
+    <uses-permission android:name="android.permission.MODIFY_AUDIO_SETTINGS" />
+    <uses-permission android:name="android.permission.READ_PHONE_STATE" />
+    <uses-permission android:name="android.permission.BROADCAST_STICKY" />
+    <uses-permission android:name="android.permission.WRITE_EXTERNAL_STORAGE" />
+    <uses-permission android:name="com.motorola.android.permission.USEFMRADIO" />
+    <uses-permission android:name="android.permission.WAKE_LOCK" />
+    <uses-permission android:name="android.permission.READ_PHONE_STATE" />
+    <uses-permission android:name="android.permission.BROADCAST_STICKY" />
+    <uses-permission android:name="android.permission.WRITE_EXTERNAL_STORAGE" />
+    <uses-permission android:name="com.android.launcher.permission.INSTALL_SHORTCUT" />
+    <uses-permission android:name="android.permission.ACCESS_NETWORK_STATE" />
+    <uses-permission android:name="android.permission.ACCESS_WIFI_STATE" />
+    <uses-permission android:name="android.permission.READ_PHONE_STATE" />
+    <uses-permission android:name="android.permission.WRITE_EXTERNAL_STORAGE" />
+    <uses-permission android:name="android.permission.INTERNET" />
+    <uses-permission android:name="android.permission.GET_TASKS" />
+    <uses-permission android:name="android.permission.MANAGE_ACCOUNTS" />
+    <uses-permission android:name="android.permission.GET_ACCOUNTS" />
+    <supports-screens android:smallScreens="false" android:normalScreens="true" android:largeScreens="true" />
+    <uses-permission android:name="android.permission.BLUETOOTH_ADMIN" />
+    <uses-permission android:name="android.permission.BLUETOOTH" />
+    <uses-permission android:name="android.permission.READ_LOGS" />
+    <uses-permission android:name="android.permission.WRITE_SETTINGS" />
+    <application android:label="@string/app_name" android:icon="@drawable/ic_launcher" android:name="QTApplication">
+        <receiver android:name=".notification.BootCompletedReceiver">
+            <intent-filter>
+                <action android:name="android.intent.action.BOOT_COMPLETED" />
+            </intent-filter>
+        </receiver>
+        <receiver android:name=".notification.ScreenOnReceiver">
+            <intent-filter>
+                <action android:name="android.net.conn.CONNECTIVITY_CHANGE" />
+            </intent-filter>
+        </receiver>
+        <receiver android:name="fm.qingting.qtradio.headset.MediaButtonReceiver">
+            <intent-filter>
+                <action android:name="android.intent.action.MEDIA_BUTTON" />
+            </intent-filter>
+        </receiver>
+        <receiver android:name=".pushmessage.IxintuiMessageReceiver">
+            <intent-filter>
+                <action android:name="com.ixintui.action.MESSAGE" />
+                <action android:name="com.ixintui.action.RESULT" />
+                <action android:name="com.ixintui.action.notification.CLICK" />
+            </intent-filter>
+        </receiver>
+        <activity android:theme="@*android:style/Theme.Translucent.NoTitleBar" android:name="com.ixintui.push.PushActivity" android:configChanges="keyboardHidden|orientation">
+            <intent-filter>
+                <action android:name="com.ixintui.push.PushActivity" />
+                <category android:name="android.intent.category.DEFAULT" />
+            </intent-filter>
+        </activity>
+        <service android:name="com.ixintui.push.PushService" android:exported="true" android:process=":ixintui_service_v1" />
+        <service android:name="com.ixintui.push.MediateService" android:exported="true" />
+        <provider android:name="com.ixintui.push.Provider" android:exported="false" android:authorities="fm.qingting.qtradio.ixintui.push.provider" />
+        <receiver android:name="com.ixintui.push.Receiver">
+            <intent-filter>
+                <action android:name="com.ixintui.action.BROADCAST" />
+            </intent-filter>
+            <intent-filter>
+                <action android:name="android.intent.action.PACKAGE_REMOVED" />
+                <data android:scheme="package" />
+            </intent-filter>
+            <intent-filter>
+                <action android:name="android.intent.action.BOOT_COMPLETED" />
+                <action android:name="android.net.conn.CONNECTIVITY_CHANGE" />
+            </intent-filter>
+        </receiver>
+        <receiver android:name=".notification.QTAlarmReceiver" android:exported="false">
+            <intent-filter>
+                <action android:name="fm.qingting.alarmintent" />
+                <action android:name="fm.qingting.start" />
+                <action android:name="fm.qingting.quit" />
+                <action android:name="fm.qingting.reserveintent" />
+                <action android:name="fm.qingting.notifyintent" />
+                <action android:name="fm.qingting.protectintent" />
+                <action android:name="fm.qingting.killintent" />
+            </intent-filter>
+        </receiver>
+        <receiver android:name=".notification.InstantPlayReceiver" android:exported="false">
+            <intent-filter>
+                <action android:name="fm.qingting.qtradio.INSTANT_PLAY" />
+                <action android:name="fm.qingting.qtradio.INSTANT_PLAY_NEXT" />
+                <action android:name="fm.qingting.qtradio.INSTANT_PLAY_PRE" />
+                <action android:name="fm.qingting.qtradio.CAR_PLAY_NEXT" />
+                <action android:name="fm.qingting.qtradio.CAR_PLAY_PRE" />
+                <action android:name="fm.qingting.qtradio.CAR_PLAY" />
+                <action android:name="fm.qingting.qtradio.CAR_PAUSE" />
+            </intent-filter>
+        </receiver>
+        <receiver android:name=".pushmessage.UFOReceiver" android:exported="false">
+            <intent-filter>
+                <action android:name="fm.qingting.qtradio.GEXIN_MESSAGE" />
+            </intent-filter>
+        </receiver>
+        <receiver android:name=".notification.UpgradeReceiver">
+            <intent-filter>
+                <action android:name="android.intent.action.PACKAGE_REPLACED" />
+                <data android:scheme="package" />
+            </intent-filter>
+        </receiver>
+        <receiver android:name=".manager.EducationReceiver" android:exported="false">
+            <intent-filter>
+                <action android:name="fm.qingting.qtradio.collection_remind" />
+            </intent-filter>
+        </receiver>
+        <activity android:theme="@style/AppTheme" android:label="@string/app_name" android:name=".QTRadioActivity" android:excludeFromRecents="false" android:launchMode="singleTask" android:screenOrientation="portrait" android:windowSoftInputMode="adjustResize">
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+                <category android:name="android.intent.category.LAUNCHER" />
+            </intent-filter>
+            <intent-filter>
+                <action android:name="android.intent.action.VIEW" />
+                <category android:name="android.intent.category.DEFAULT" />
+                <category android:name="android.intent.category.BROWSABLE" />
+                <data android:scheme="qtfm" />
+            </intent-filter>
+        </activity>
+        <activity android:theme="@style/Theme.Transparent" android:name=".ShieldActivity" android:excludeFromRecents="true" android:noHistory="true">
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+            </intent-filter>
+            <intent-filter>
+                <category android:name="android.intent.category.DEFAULT" />
+                <action android:name="android.intent.action.SHIELD" />
+                <data android:scheme="shield" />
+            </intent-filter>
+        </activity>
+        <activity android:name="com.tencent.tauth.AuthActivity" android:launchMode="singleTask" android:noHistory="true">
+            <intent-filter>
+                <action android:name="android.intent.action.VIEW" />
+                <category android:name="android.intent.category.DEFAULT" />
+                <category android:name="android.intent.category.BROWSABLE" />
+                <data android:scheme="tencent100387802" />
+            </intent-filter>
+        </activity>
+        <activity android:theme="@*android:style/Theme.Translucent.NoTitleBar" android:name="com.tencent.connect.common.AssistActivity" android:screenOrientation="portrait" />
+        <activity android:label="@string/app_name" android:name=".wxapi.WXEntryActivity" android:exported="true" />
+        <activity android:name="com.tencent.weibo.sdk.android.component.Authorize" />
+        <activity android:name="com.sina.weibo.sdk.component.WeiboSdkBrowser" android:exported="false" android:configChanges="keyboardHidden|orientation" android:windowSoftInputMode="adjustResize" />
+        <activity android:name="com.umeng.fb.ui.SendFeedback" android:windowSoftInputMode="adjustResize" />
+        <activity android:name="com.umeng.fb.ui.FeedbackConversations" />
+        <activity android:name="com.umeng.fb.ui.FeedbackConversation" android:configChanges="keyboard" />
+        <activity android:name="com.umeng.fb.ConversationActivity" />
+        <activity android:name="com.umeng.fb.ContactActivity" />
+        <service android:name="com.umeng.common.net.DownloadingService" android:exported="false" android:process=":DownloadingService" />
+        <service android:label="@string/app_service" android:name=".QTRadioService" android:process=":local">
+            <intent-filter>
+                <action android:name="fm.qingting.qtradio.QTRadioService" />
+                <category android:name="android.intent.category.DEFAULT" />
+            </intent-filter>
+        </service>
+        <service android:name=".NotificationService" android:process=":notification">
+            <intent-filter>
+                <action android:name="fm.qingting.qtradio.NotificationService" />
+                <category android:name="android.intent.category.DEFAULT" />
+            </intent-filter>
+        </service>
+        <service android:name=".QTRadioAdvertService" android:process=":qt">
+            <intent-filter>
+                <action android:name="fm.qingting.qtradio.QTRadioAdvertService" />
+                <category android:name="android.intent.category.DEFAULT" />
+            </intent-filter>
+        </service>
+        <meta-data android:name="ire_channel" android:value="@string/channel_name" />
+        <meta-data android:name="UMENG_APPKEY" android:value="@string/umengappid" />
+        <meta-data android:name="UMENG_MESSAGE_SECRET" android:value="@string/umengmsgid" />
+        <receiver android:name="com.umeng.message.NotificationProxyBroadcastReceiver" android:exported="false" />
+        <receiver android:name="com.umeng.message.RegistrationReceiver">
+            <intent-filter>
+                <action android:name="android.net.conn.CONNECTIVITY_CHANGE" />
+            </intent-filter>
+            <intent-filter>
+                <action android:name="android.intent.action.PACKAGE_REMOVED" />
+                <data android:scheme="package" />
+            </intent-filter>
+        </receiver>
+        <receiver android:name="com.umeng.message.UmengBroadcastReceiver">
+            <intent-filter>
+                <action android:name="org.agoo.android.intent.action.RECEIVE" />
+            </intent-filter>
+            <intent-filter>
+                <action android:name="fm.qingting.qtradio.intent.action.COMMAND" />
+            </intent-filter>
+            <intent-filter>
+                <action android:name="org.agoo.android.intent.action.RE_ELECTION_V2" />
+            </intent-filter>
+        </receiver>
+        <service android:name="com.umeng.message.UmengService" android:exported="true" android:process=":pushservice">
+            <intent-filter>
+                <action android:name="fm.qingting.qtradio.intent.action.START" />
+            </intent-filter>
+            <intent-filter>
+                <action android:name="fm.qingting.qtradio.intent.action.COCKROACH" />
+            </intent-filter>
+            <intent-filter>
+                <action android:name="org.agoo.android.intent.action.PING" />
+            </intent-filter>
+        </service>
+        <service android:name="org.android.agoo.service.ElectionService" android:exported="true" android:process=":pushservice">
+            <intent-filter>
+                <action android:name="org.agoo.android.intent.action.ELECTION_V2" />
+            </intent-filter>
+        </service>
+        <service android:name="com.umeng.message.UmengIntentService" android:process=":pushservice" />
+        <service android:name="fm.qingting.qtradio.pushmessage.UmengPushIntentService" android:process=":pushservice" />
+        <meta-data android:name="UMENG_CHANNEL" android:value="@string/channel_name" />
+        <meta-data android:name="TD_APP_ID" android:value="@string/tdappid" />
+        <meta-data android:name="TD_CHANNEL_ID" android:value="@string/channel_name" />
+        <meta-data android:name="PUSH_APPKEY" android:value="FCQN4EhE5p5c3hkEyJ8iH3" />
+        <meta-data android:name="PUSH_APPID" android:value="IUddREgSpH7EmUpOTp3906" />
+        <meta-data android:name="PUSH_APPSECRET" android:value="cYpBoClMWu87nNamOiBjD6" />
+        <meta-data android:name="PUSH_GROUPID" android:value="" />
+        <receiver android:name="com.google.android.apps.analytics.AnalyticsReceiver" android:exported="false">
+            <intent-filter>
+                <action android:name="com.android.vending.INSTALL_REFERRER" />
+            </intent-filter>
+        </receiver>
+        <service android:name="fm.qingting.download.qtradiodownload.service.QT_RadioDownloadService" />
+        <activity android:name="com.ailk.openplatform.task.LoginActivity" android:launchMode="singleTask">
+            <intent-filter>
+                <action android:name="android.intent.action.VIEW" />
+                <category android:name="android.intent.category.DEFAULT" />
+                <category android:name="android.intent.category.BROWSABLE" />
+                <data android:scheme="http" android:host="womusic.callback.qingting.fm" />
+            </intent-filter>
+        </activity>
+        <service android:name="fm.qingting.qtradio.voice.QTRecognitionService">
+            <intent-filter>
+                <action android:name="android.speech.RecognitionService" />
+                <category android:name="android.intent.category.DEFAULT" />
+            </intent-filter>
+            <intent-filter android:priority="100">
+                <action android:name="com.miui.voicerecognizer" />
+                <category android:name="android.intent.category.DEFAULT" />
+            </intent-filter>
+        </service>
+    </application>
+</manifest>

@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <integer name="config_animTimeDefault">220</integer>
+    <integer name="config_animTimeShort">150</integer>
+    <integer name="config_alpha_start">0</integer>
+    <integer name="config_alpha_end">255</integer>
+    <integer name="default_contenttype">0</integer>
+    <integer name="default_channeltype">1</integer>
+    <integer name="default_circle_indicator_orientation">0</integer>
+</resources>

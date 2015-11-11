@@ -1,0 +1,8 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout android:layout_width="fill_parent" android:layout_height="wrap_content"
+  xmlns:android="http://schemas.android.com/apk/res/android">
+    <ImageView android:id="@id/ixintui_custom_notif_icon" android:layout_width="48.0dip" android:layout_height="48.0dip" android:layout_marginLeft="10.0dip" android:layout_marginTop="8.0dip" android:layout_marginRight="10.0dip" android:layout_marginBottom="8.0dip" android:contentDescription="@*android:string/unknownName" />
+    <TextView android:textAppearance="@*android:style/TextAppearance.Small" android:id="@id/ixintui_custom_notif_time" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginTop="10.0dip" android:layout_marginRight="6.0dip" android:layout_alignParentTop="true" android:layout_alignParentRight="true" />
+    <TextView android:textAppearance="@*android:style/TextAppearance.Medium" android:ellipsize="marquee" android:id="@id/ixintui_custom_notif_title" android:fadingEdge="horizontal" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginLeft="4.0dip" android:layout_marginTop="10.0dip" android:singleLine="true" android:layout_toLeftOf="@id/ixintui_custom_notif_time" android:layout_toRightOf="@id/ixintui_custom_notif_icon" android:layout_alignParentTop="true" />
+    <TextView android:textAppearance="@*android:style/TextAppearance.Small" android:ellipsize="marquee" android:id="@id/ixintui_custom_notif_content" android:fadingEdge="horizontal" android:layout_width="wrap_content" android:layout_height="wrap_content" android:singleLine="true" android:layout_below="@id/ixintui_custom_notif_title" android:layout_alignLeft="@id/ixintui_custom_notif_title" />
+</RelativeLayout>

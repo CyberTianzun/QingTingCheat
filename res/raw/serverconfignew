@@ -1,0 +1,2564 @@
+
+{
+    "defaultroots": [
+        {
+            "root": "http://api2.qingting.fm"
+        },
+        {
+            "root": "http://42.120.60.147"
+        },
+        {
+            "root": "http://42.96.248.246"
+        }
+    ],
+    "requests": [
+        {
+            "datatype": "GET_LIST_ACTIVITIES",
+            "note": "获得活动列表",
+            "command": "/v6/media/activities",
+            "datasource": "net",
+            "type": "GET_LIST_ACTIVITIES",
+            "method": "get"
+        },
+        {
+            "datatype": "POST_PROGRAM_BARRAGE",
+            "commandparamencode": "UTF-8",
+            "note": "发布弹幕",
+            "command": "/api/v1/programs/hotspots",
+            "datasource": "net",
+            "type": "POST_PROGRAM_BARRAGE",
+            "method": "boundary",
+            "roots": [
+                {
+                    "root": "http://qtime.qingting.fm:8800"
+                }
+            ]
+        },        
+        {
+            "datatype": "GET_PROGRAM_BARRAGE",
+            "commandparamencode": "UTF-8",
+            "note": "获取弹幕",
+            "command": "/api/v1/programs/hotspots?programId={id}",
+            "datasource": "net",
+            "type": "GET_PROGRAM_BARRAGE",
+            "method": "get",
+            "roots": [
+                {
+                    "root": "http://qtime.qingting.fm"
+                }
+            ]
+        },                
+        {
+            "datatype": "POST_LIKE_BARRAGE",
+            "commandparamencode": "UTF-8",
+            "note": "点赞",
+            "command": "/api/v1/hotspots/{id}/like",
+            "datasource": "net",
+            "type": "POST_LIKE_BARRAGE",
+            "method": "get",
+            "roots": [
+                {
+                    "root": "http://qtime.qingting.fm"
+                }
+            ]
+        },   
+        {
+            "datatype": "GET_QTIME_CONFIG",
+            "commandparamencode": "UTF-8",
+            "note": "获取测试项目qtime的配置文件",
+            "command": "/api/v1/config",
+            "datasource": "net",
+            "type": "GET_QTIME_CONFIG",
+            "method": "get",
+            "roots": [
+                {
+                    "root": "http://qtime.qingting.fm"
+                }
+            ]
+        },    
+        {
+            "datatype": "GET_WSQ_NEW",
+            "commandparamencode": "UTF-8",
+            "note": "查询某个微社区的新帖数",
+            "command": "/api/v1/wsq/{wid}/new",
+            "datasource": "net",
+            "type": "GET_WSQ_NEW",
+            "method": "get",
+            "roots": [
+                {
+                    "root": "http://qtime.qingting.fm"
+                }
+            ]
+        },                  
+        {
+            "datatype": "GET_PODCASTER_BASEINFO",
+            "commandparamencode": "UTF-8",
+            "note": "获取播客主基本的信息",
+            "command": "/v6/media/podcasters/{id}",
+            "datasource": "net",
+            "type": "GET_PODCASTER_BASEINFO",
+            "method": "get"
+        },
+		{
+            "datatype": "GET_PODCASTER_CHANNELS",
+            "commandparamencode": "UTF-8",
+            "note": "获取播客主的专辑列表",
+            "command": "/v6/media/podcasters/{id}/channelondemands",
+            "datasource": "net",
+            "type": "GET_PODCASTER_CHANNELS",
+            "method": "get"
+        },        
+		{
+            "datatype": "GET_PODCASTER_DETAILINFO",
+            "commandparamencode": "UTF-8",
+            "note": "获取播客主详细信息",
+            "command": "/v6/media/podcasters/{id}/detail",
+            "datasource": "net",
+            "type": "GET_PODCASTER_DETAILINFO",
+            "method": "get"
+        },                
+		{
+            "datatype": "GET_PODCASTER_LATESTINFO",
+            "commandparamencode": "UTF-8",
+            "note": "获取播客主最新节目",
+            "command": "/v6/media/podcasters/{id}/recent/limit/{limit}",
+            "datasource": "net",
+            "type": "GET_PODCASTER_LATESTINFO",
+            "method": "get"
+        },                        
+       {
+            "datatype": "GET_LOCAL_CATEGORY",
+            "note": "获取本地业务分类列表",
+            "command": "/v6/media/categories/local",
+            "datasource": "net",
+            "type": "GET_LOCAL_CATEGORY",
+            "method": "get"
+        },
+       {
+            "datatype": "GET_LOCAL_RECOMMEND_INFO",
+            "note": "获取本地推荐业务信息",
+            "command": "/v6/media/recommends/guides/section/1",
+            "datasource": "net",
+            "type": "GET_LOCAL_RECOMMEND_INFO",
+            "method": "get"
+        },        
+       {
+            "datatype": "GET_LIST_CATEGORIES",
+            "note": "获得所有点播分类",
+            "command": "/v6/media/categories",
+            "datasource": "net",
+            "type": "GET_LIST_CATEGORIES",
+            "method": "get"
+        },
+       {
+            "datatype": "GET_LIST_LIVE_CATEGORIES",
+            "note": "获得所有直播分类",
+            "command": "/v6/media/recommends/categories/channellives",
+            "datasource": "net",
+            "type": "GET_LIST_LIVE_CATEGORIES",
+            "method": "get"
+        },        
+		{
+            "datatype": "GET_CATEGORY_ATTRS",
+            "note": "获得分类属性列表",
+            "command": "/v6/media/categories/{id}",
+            "datasource": "net",
+            "type": "GET_CATEGORY_ATTRS",
+            "method": "get"
+        },        
+        {
+            "datatype": "GET_ALL_CHANNELS",
+            "note": "获得分类下全部电台列表",
+            "command": "/v6/media/categories/{id}/channels/order/0/curpage/{page}/pagesize/{pagesize}",
+            "datasource": "net",
+            "type": "GET_ALL_CHANNELS",
+            "method": "get"
+        },                        
+        {
+            "datatype": "GET_LIST_CHANNELS",
+            "note": "获得标签组合下的电台列表",
+            "command": "/v6/media/categories/{id}/channels/order/0/attr/{attr}/curpage/{page}/pagesize/{pagesize}",
+            "datasource": "net",
+            "type": "GET_LIST_CHANNELS",
+            "method": "get"
+        },                        
+        {
+            "datatype": "GET_LIST_LIVE_CHANNELS",
+            "note": "获得标签组合下的直播电台列表",
+            "command": "/v6/media/categories/{id}/channels/order/0/attr/{attr}/curpage/{page}/pagesize/{pagesize}",
+            "datasource": "net",
+            "type": "GET_LIST_LIVE_CHANNELS",
+            "method": "get"
+        },                                
+        {
+            "datatype": "GET_LIVE_CHANNEL_INFO",
+            "note": "获得单个直播电台信息",
+            "command": "/v6/media/channellives/{id}",
+            "datasource": "net",
+            "type": "GET_LIVE_CHANNEL_INFO",
+            "method": "get"
+        },
+        {
+            "datatype": "GET_VIRTUAL_CHANNEL_INFO",
+            "note": "获得单个虚拟电台信息",
+            "command":  "/v6/media/channelondemands/{id}",
+            "datasource": "net",
+            "type": "GET_VIRTUAL_CHANNEL_INFO",
+            "method": "get"
+        },                
+        {
+            "datatype": "GET_LIVE_PROGRAM_SCHEDULE",
+            "note": "获得直播电台节目单",
+            "command":  "/v6/media/channellives/{id}/programs/day/{day}",
+            "datasource": "net",
+            "type": "GET_LIVE_PROGRAM_SCHEDULE",
+            "method": "get"
+        },                        
+        {
+            "datatype": "GET_VIRTUAL_PROGRAM_SCHEDULE",
+            "note": "获得虚拟电台节目单",
+            "command":  "/v6/media/channelondemands/{id}/programs/curpage/{page}/pagesize/{pagesize}",
+            "datasource": "net",
+            "type": "GET_VIRTUAL_PROGRAM_SCHEDULE",
+            "method": "get"
+        },                               
+        {
+            "datatype": "RELOAD_VIRTUAL_PROGRAMS_SCHEDULE",
+            "note": "刷新获得虚拟电台节目单",
+            "command":  "/v6/media/channelondemands/{id}/programs/curpage/{page}/pagesize/{pagesize}",
+            "datasource": "net",
+            "type": "RELOAD_VIRTUAL_PROGRAMS_SCHEDULE",
+            "method": "get"
+        },                                       
+        {
+            "datatype": "GET_VIRTUAL_PROGRAM_INFO",
+            "note": "获得虚拟节目信息",
+            "command":  "/v6/media/programs/{id}",
+            "datasource": "net",
+            "type": "GET_VIRTUAL_PROGRAM_INFO",
+            "method": "get"
+        },                                      
+        {
+            "datatype": "GET_LIST_MEDIACENTER",
+            "note": "获得音频结点信息",
+            "command":  "/v6/media/mediacenterlist",
+            "datasource": "net",
+            "type": "GET_LIST_MEDIACENTER",
+            "method": "get"
+        },
+        {
+            "datatype": "GET_RECOMMEND_PLAYING",
+            "note": "获得正在播放的直播电台列表",
+            "command":  "/v6/media/recommends/nowplaying/day/{day}",
+            "datasource": "net",
+            "type": "GET_RECOMMEND_PLAYING",
+            "method": "get"
+        },                                              
+        {
+            "datatype": "GET_SPECIAL_TOPIC_CHANNELS",
+            "note": "获得专题电台列表",
+            "command":  "/v6/media/topics/{id}",
+            "datasource": "net",
+            "type": "GET_SPECIAL_TOPIC_CHANNELS",
+            "method": "get"
+        },                                                      
+        {
+            "datatype": "GET_RECOMMEND_INFO",
+            "note": "获得推荐内容,0为首页,531为校园首页",
+            "command":  "/v6/media/recommends/guides/section/{id}",
+            "datasource": "net",
+            "type": "GET_RECOMMEND_INFO",
+            "method": "get"
+        },                                                      
+        {
+            "datatype": "GET_BILLBOARD_CHANNELS",
+            "note": "获取电台排行榜",
+            "command":  "/v6/media/recommends/billboards/channellives",
+            "datasource": "net",
+            "type": "GET_BILLBOARD_CHANNELS",
+            "method": "get"
+        },                                                              
+        {
+            "datatype": "GET_BILLBOARD_PROGRAMS",
+            "note": "获取节目排行榜",
+            "command":  "/v6/media/recommends/billboards/programondemands",
+            "datasource": "net",
+            "type": "GET_BILLBOARD_PROGRAMS",
+            "method": "get"
+        },                                                                     
+        {
+            "datatype": "GET_ADV_FROM_AIRWAVE",
+            "note": "获取airwave提供的广告",
+            "command": "bid={bid}&adspaceid={adspaceid}&adtype={adtype}&pkgname={pkgname}&appname={appname}&conn={conn}&carrier={carrier}&apitype={apitype}&os={os}&osv={osv}&imei=&idfa=&aaid=&wma=&oid=&aid={aid}&device={device}&ua={ua}&&ip={ip}&width={width}&height={height}&pid={pid}&pcat={pcat}&density={density}",
+            "datasource": "net",
+            "type": "GET_ADV_FROM_AIRWAVE",
+            "method": "get",
+            "roots": [
+                {
+                    "root": "http://ad.madserving.com/adcall/bidrequest?"
+                }
+            ]                        
+        },                                                                                             
+        {
+            "datatype": "GET_AD_WHITE_LIST",
+            "note": "获取广告白名单",
+            "command":  "/api/ad/cwhitelist",
+            "datasource": "net",
+            "type": "GET_AD_WHITE_LIST",
+            "method": "get",
+            "roots": [
+                {
+                    "root": "http://ad.qingting.fm"
+                },
+                {
+                    "root": "http://42.121.32.154"
+                },
+                {
+                    "root": "http://42.121.32.155"
+                }
+            ]                        
+        },                                                                                     
+        {
+            "datatype": "GET_AD_POS",
+            "note": "获取广告位置",
+            "command":  "/api/ad/poslist?version=6",
+            "datasource": "net",
+            "type": "GET_AD_POS",
+            "method": "get",
+            "roots": [
+                {
+                    "root": "http://ad.qingting.fm"
+                },
+                {
+                    "root": "http://42.121.32.154"
+                },
+                {
+                    "root": "http://42.121.32.155"
+                }
+            ]                        
+        },                                                                             
+        {
+            "datatype": "GET_AD_INFO",
+            "note": "获取广告位对应的信息",
+            "command":  "/api/ad/getad?zone={zone}&region={region}&deviceid={deviceid}&devicetype={devicetype}&status={status}&posquery={posquery}&pkg={pkg}&phonetype={phonetype}",
+            "datasource": "net",
+            "type": "GET_AD_INFO",
+            "method": "get",
+            "roots": [
+                {
+                    "root": "http://ad.qingting.fm"
+                }
+            ]                        
+            
+        },              
+        {
+            "datatype": "GET_AD_INFO_BYCHANNEL",
+            "note": "获取电台广告位对应的信息",
+            "command":  "/api/ad/getad?zone={zone}&region={region}&deviceid={deviceid}&devicetype={devicetype}&status={status}&posquery={posquery}&pkg={pkg}&phonetype={phonetype}&channel={channel}",
+            "datasource": "net",
+            "type": "GET_AD_INFO_BYCHANNEL",
+            "method": "get",
+            "roots": [
+                {
+                    "root": "http://ad.qingting.fm"
+                }
+            ]                        
+            
+        },                      
+        {
+            "datatype": "GET_AM_AD_CONFIG",
+            "note": "获取admaster和miaozhen广告配置",
+            "command":  "/api/ad/c2?phonetype=android",
+            "datasource": "net",
+            "type": "GET_AM_AD_CONFIG",
+            "method": "get",
+            "roots": [
+                {
+                    "root": "http://ad.qingting.fm"
+                }
+             ]                        
+        },
+		{
+            "datatype": "GET_AD_LOCATION",
+            "note": "获取广告位置",
+            "command":  "/api/ad/location",
+            "datasource": "net",
+            "type": "GET_AD_LOCATION",
+            "method": "get",
+            "roots": [
+                {
+                    "root": "http://ad.qingting.fm"
+                }
+             ]                        
+        },                                                                                                                                
+        {
+            "datatype": "GET_AD_CONFIG",
+            "note": "获取广告配置",
+            "command":  "/api/ad/c?phonetype=android",
+            "datasource": "net",
+            "type": "GET_AD_CONFIG",
+            "method": "get",
+            "roots": [
+                {
+                    "root": "http://ad.qingting.fm"
+                },
+                {
+                    "root": "http://42.121.32.154"
+                },
+                {
+                    "root": "http://42.121.32.155"
+                }
+            ]                        
+        },                                                                                                                
+        {
+            "datatype": "get_im_peer_latest_msg",
+            "commandparamencode": "UTF-8",
+            "note": "用户收到的来自其他用户的未读消息",
+            "command": "/u2/api/notification/user?userid={userid}",
+            "datasource": "net",
+            "type": "get_im_peer_latest_msg",
+            "method": "get",
+            "roots": [
+                {
+                    "root": "http://u2.qingting.fm"
+                },
+                {
+                    "root": "http://42.120.60.147"
+                }
+            ]
+        },                                                                                
+        {
+            "datatype": "get_im_group_latest_msg",
+            "commandparamencode": "UTF-8",
+            "note": "用户收到的来自群的未读消息",
+            "command": "/u2/api/notification/group?group={groupId}&messageID={msgId}",
+            "datasource": "net",
+            "type": "get_im_group_latest_msg",
+            "method": "get",
+            "roots": [
+                {
+                    "root": "http://u2.qingting.fm"
+                },
+                {
+                    "root": "http://42.120.60.147"
+                }
+            ]
+        },                   
+        {
+            "datatype": "get_im_peer_history_from_server",
+            "commandparamencode": "UTF-8",
+            "note": "获取群信息",
+            "command": "/u2/api/message/user?receiver={receiver}&sender={sender}",
+            "datasource": "net",
+            "type": "get_im_peer_history_from_server",
+            "method": "get",
+            "roots": [
+                {
+                    "root": "http://u2.qingting.fm"
+                },
+                {
+                    "root": "http://121.199.38.37"
+                }        
+             ]
+        },                                                                                                                                                                        
+        {
+            "datatype": "get_share_info",
+            "note": "获取分享信息",
+            "command": "/v5/media/recommend/startup",
+            "datasource": "net",
+            "type": "get_share_info",
+            "method": "get"
+        },        
+        {
+            "datatype": "recommend_playing_programs_info",
+            "note": "正在直播节目信息",
+            "command": "/v5/media/listenguides/{id}",
+            "datasource": "net",
+            "type": "recommend_playing_programs_info",
+            "method": "get"
+        },        
+        {
+            "datatype": "recommend_frontpage",
+            "note": "首页推荐",
+            "command": "/api/qtradiov4/recommend?pagesize={pagesize}&curpage={curpage}",
+            "datasource": "net",
+            "type": "recommend_frontpage",
+            "method": "get",
+            "roots": [
+                {
+                    "root": "http://api.qingting.fm"
+                },
+                {
+                    "root": "http://42.120.60.147"
+                },
+                {
+                    "root": "http://42.96.248.246"
+                }
+            ]            
+            
+        },
+        {
+            "datatype": "live_channel_topic",
+            "note": "获取直播节目话题",
+            "command": "/v5/media/topics/{id}?currenttime={currenttime}",
+            "datasource": "net",
+            "type": "live_channel_topic",
+            "method": "get"
+        },        
+        {
+            "datatype": "guide_favorite",
+            "note": "收藏导引",
+            "command": "/v5/media/recommend/collection",
+            "datasource": "net",
+            "type": "guide_favorite",
+            "method": "get"
+        },
+        {
+            "datatype": "get_ringtone_list",
+            "note": "获取闹铃列表",
+            "command": "/v5/media/ringtonelist",
+            "datasource": "net",
+            "type": "get_ringtone_list",
+            "method": "get"
+        },
+        {
+            "datatype": "get_datacenter_list",
+            "note": "获取datacenter",
+            "command": "/v5/media/mediacenterlist",
+            "datasource": "net",
+            "type": "get_datacenter_list",
+            "method": "get"
+        },
+        {
+            "datatype": "get_virtualchannel_info",
+            "note": "获取单个虚拟电台信息",
+            "command": "/v5/media/channels/{id}",
+            "datasource": "net",
+            "type": "get_virtualchannel_info",
+            "method": "get"
+        },
+        {
+            "datatype": "get_virtualchannel_info_b",
+            "note": "获取单个虚拟电台信息",
+            "command": "/v5/media/channels/{id}",
+            "datasource": "net",
+            "type": "get_virtualchannel_info_b",
+            "method": "get"
+        },
+        {
+            "datatype": "get_livechannel_info",
+            "note": "获取单个电台信息",
+            "command": "/v5/media/livechannels/{id}",
+            "datasource": "net",
+            "type": "get_livechannel_info",
+            "method": "get"
+        },
+        {
+            "datatype": "GETDB_CATEGORY_ATTRIBUTES",
+            "note": "获取分类的属性",
+            "command": "GETDB_CATEGORY_ATTRIBUTES",
+            "datasource": "AttributesDS",
+            "type": "GETDB_CATEGORY_ATTRIBUTES",
+            "method": "get"
+        },
+        {
+            "datatype": "UPDATEDB_CATEGORY_ATTRIBUTES",
+            "note": "更新分类属性",
+            "command": "UPDATEDB_CATEGORY_ATTRIBUTES",
+            "datasource": "AttributesDS",
+            "type": "UPDATEDB_CATEGORY_ATTRIBUTES",
+            "method": "get"
+        },
+        {
+            "datatype": "DELETEDB_CATEGORY_ATTRIBUTES",
+            "note": "删除分类属性",
+            "command": "DELETEDB_CATEGORY_ATTRIBUTES",
+            "datasource": "AttributesDS",
+            "type": "DELETEDB_CATEGORY_ATTRIBUTES",
+            "method": "get"
+        },                
+        {
+            "datatype": "getdb_generic_obj",
+            "note": "获取结点",
+            "command": "getdb_generic_obj",
+            "datasource": "GenericDS",
+            "type": "getdb_generic_obj",
+            "method": "get"
+        },
+        {
+            "datatype": "updatedb_generic_obj",
+            "note": "更新推送结点",
+            "command": "updatedb_generic_obj",
+            "datasource": "GenericDS",
+            "type": "updatedb_generic_obj",
+            "method": "get"
+        },
+        {
+            "datatype": "deletedb_generic_obj",
+            "note": "删除推送结点",
+            "command": "deletedb_generic_obj",
+            "datasource": "GenericDS",
+            "type": "deletedb_generic_obj",
+            "method": "get"
+        },                
+        {
+            "datatype": "getdb_pull_node",
+            "note": "获取推送结点",
+            "command": "getdb_pull_node",
+            "datasource": "PullNodeDS",
+            "type": "getdb_pull_node",
+            "method": "get"
+        },
+        {
+            "datatype": "updatedb_pull_node",
+            "note": "更新推送结点",
+            "command": "updatedb_pull_node",
+            "datasource": "PullNodeDS",
+            "type": "updatedb_pull_node",
+            "method": "get"
+        },
+        {
+            "datatype": "deletedb_pull_node",
+            "note": "删除推送结点",
+            "command": "deletedb_pull_node",
+            "datasource": "PullNodeDS",
+            "type": "deletedb_pull_node",
+            "method": "get"
+        },        
+        {
+            "datatype": "getdb_im_user_info",
+            "note": "读取im用户信息",
+            "command": "getdb_im_user_info",
+            "datasource": "IMUserInfoDS",
+            "type": "getdb_im_user_info",
+            "method": "get"
+        },
+        {
+            "datatype": "updatedb_im_user_info",
+            "note": "插入im用户信息",
+            "command": "updatedb_im_user_info",
+            "datasource": "IMUserInfoDS",
+            "type": "updatedb_im_user_info",
+            "method": "get"
+        },        
+        {
+            "datatype": "getdb_user_info",
+            "note": "读取用户信息",
+            "command": "getdb_user_info",
+            "datasource": "UserInfoDS",
+            "type": "getdb_user_info",
+            "method": "get"
+        },
+        {
+            "datatype": "insertdb_user_info",
+            "note": "插入用户信息",
+            "command": "insertdb_user_info",
+            "datasource": "UserInfoDS",
+            "type": "insertdb_user_info",
+            "method": "get"
+        },
+        {
+            "datatype": "deletedb_user_info",
+            "note": "删除用户信息",
+            "command": "deletedb_user_info",
+            "datasource": "UserInfoDS",
+            "type": "deletedb_user_info",
+            "method": "get"
+        },
+        {
+            "datatype": "getdb_social_user_info",
+            "note": "读取用户社交信息",
+            "command": "getdb_social_user_info",
+            "datasource": "SocialUserProfileDS",
+            "type": "getdb_social_user_info",
+            "method": "get"
+        },
+        {
+            "datatype": "insertdb_social_user_info",
+            "note": "插入用户社交信息",
+            "command": "insertdb_social_user_info",
+            "datasource": "SocialUserProfileDS",
+            "type": "insertdb_social_user_info",
+            "method": "get"
+        },
+        {
+            "datatype": "deletedb_social_user_info",
+            "note": "删除用户社交信息",
+            "command": "deletedb_social_user_info",
+            "datasource": "SocialUserProfileDS",
+            "type": "deletedb_social_user_info",
+            "method": "get"
+        },
+        {
+            "datatype": "get_advertisements_info",
+            "note": "获取闪屏广告位",
+            "command": "/api/ad/splash?uuid={uuid}&client={client}&operator={operator}&ip={ip}",
+            "datasource": "net",
+            "type": "get_advertisements_info",
+            "method": "get",
+            "roots": [
+                {
+                    "root": "http://ad.qingting.fm"
+                },
+                {
+                    "root": "http://42.121.32.154"
+                },
+                {
+                    "root": "http://42.121.32.155"
+                }
+            ]            
+        },        
+        {
+            "datatype": "more_virtual_channels",
+            "note": "加载更多的虚拟电台",
+            "command": "/v5/media/categories/{id}/channels/order/recommend/curpage/{curpage}/pagesize/{pagesize}",
+            "datasource": "net",
+            "type": "more_virtual_channels",
+            "method": "get"
+        },
+        {
+            "datatype": "virtual_dimension_list",
+            "note": "虚拟电台维度列表",
+            "command": "/v5/media/categories/{id}",
+            "datasource": "net",
+            "type": "virtual_dimension_list",
+            "method": "get"
+        },
+        {
+            "datatype": "live_category",
+            "note": "直播电台分类列表",
+            "command": "/v5/media/categories/{id}",
+            "datasource": "net",
+            "type": "live_category",
+            "method": "get"
+        },
+        {
+            "datatype": "content_category",
+            "note": "老版本内容分类列表，新版本仅用于获取广播电台最高层分类ID",
+            "command": "/v5/media/categories",
+            "datasource": "net",
+            "type": "content_category",
+            "method": "get"
+        },
+        {
+            "datatype": "v2_live_category",
+            "note": "V2直播电台分类列表",
+            "command": "/api/qtradiov2/categories?id={id}",
+            "datasource": "net",
+            "type": "v2_live_category",
+            "method": "get",
+             "roots": [
+                {
+                    "root": "http://api.qingting.fm"
+                },
+                {
+                    "root": "http://42.120.60.147"
+                },
+                {
+                    "root": "http://42.96.248.246"
+                }
+            ]
+            
+        },
+        {
+            "datatype": "GETDB_PODCASTER_FOLLOW_INFO",
+            "note": "获取是否关注指定主播",
+            "command": "GETDB_PODCASTER_FOLLOW_INFO",
+            "datasource": "MyPodcasterDS",
+            "type": "GETDB_PODCASTER_FOLLOW_INFO",
+            "method": "get"
+        },
+        {
+            "datatype": "GETDB_ALL_PODCASTER_FOLLOW_INFO",
+            "note": "获取关注的全部主播",
+            "command": "GETDB_ALL_PODCASTER_FOLLOW_INFO",
+            "datasource": "MyPodcasterDS",
+            "type": "GETDB_ALL_PODCASTER_FOLLOW_INFO",
+            "method": "get"
+        },
+        {
+            "datatype": "INSERTDB_PODCASTER_FOLLOW_INFO",
+            "note": "关注某个主播",
+            "command": "INSERTDB_PODCASTER_FOLLOW_INFO",
+            "datasource": "MyPodcasterDS",
+            "type": "INSERTDB_PODCASTER_FOLLOW_INFO",
+            "method": "get"
+        },
+        {
+            "datatype": "DELETEDB_PODCASTER_FOLLOW_INFO",
+            "note": "取消关注的主播",
+            "command": "DELETEDB_PODCASTER_FOLLOW_INFO",
+            "datasource": "MyPodcasterDS",
+            "type": "DELETEDB_PODCASTER_FOLLOW_INFO",
+            "method": "get"
+        },
+        {
+            "datatype": "GETDB_PODCASTER_LATEST_PROGRAME",
+            "note": "获取我的主播最新的节目id",
+            "command": "GETDB_PODCASTER_LATEST_PROGRAME",
+            "datasource": "MyPodcasterDS",
+            "type": "GETDB_PODCASTER_LATEST_PROGRAME",
+            "method": "get"
+        },
+        {
+	        "datatype": "UPDATEDB_PODCASTER_LATEST_PROGRAME",
+	        "note": "更新我的主播最新的节目id",
+	        "command": "UPDATEDB_PODCASTER_LATEST_PROGRAME",
+	        "datasource": "MyPodcasterDS",
+	        "type": "UPDATEDB_PODCASTER_LATEST_PROGRAME",
+	        "method": "get"
+	    },
+        {
+            "datatype": "GETDB_PODCASTER_INFO",
+            "note": "获取主播的信息",
+            "command": "GETDB_PODCASTER_INFO",
+            "datasource": "PodcasterDS",
+            "type": "GETDB_PODCASTER_INFO",
+            "method": "get"
+        },
+		{
+            "datatype": "UPDATEDB_PODCASTER_INFO",
+            "note": "插入或者更新主播基本信息",
+            "command": "UPDATEDB_PODCASTER_INFO",
+            "datasource": "PodcasterDS",
+            "type": "UPDATEDB_PODCASTER_INFO",
+            "method": "get"
+        },
+        {
+            "datatype": "live_sub_category",
+            "note": "直播电台子分类列表",
+            "command": "/v5/media/categories/{id}",
+            "datasource": "net",
+            "type": "live_sub_category",
+            "method": "get"
+        },
+        {
+            "datatype": "get_link_info",
+            "note": "获取链接信息",
+            "command": "/v5/media/scripts/{linkid}",
+            "datasource": "net",
+            "type": "get_link_info",
+            "method": "get"
+        },        
+        {
+            "datatype": "live_channels",
+            "note": "新版直播电台列表",
+            "command": "/v5/media/categories/{id}/livechannels/curpage/{curpage}/pagesize/{pagesize}",
+            "datasource": "net",
+            "type": "live_channels",
+            "method": "get"
+        },
+        {
+            "datatype": "programs_schedule_by_day",
+            "note": "按天数获取节目单",
+            "command": "/v5/media/livechannels/{id}/liveprograms/day/{day}",
+            "datasource": "net",
+            "type": "programs_schedule_by_day",
+            "method": "get"
+        },
+        {
+            "datatype": "virtual_programs_schedule",
+            "note": "获取虚拟电台节目单",
+            "command": "/v5/media/channels/{id}/programs/curpage/{curpage}/pagesize/{pagesize}",
+            "datasource": "net",
+            "type": "virtual_programs_schedule",
+            "method": "get"
+        },
+        {
+            "datatype": "virtual_programs_schedule",
+            "command": "/v5/media/channels/{id}/programs/curpage/{curpage}/pagesize/{pagesize}/sinceid/{sinceid}",
+            "type": "virtual_programs_schedule_since",
+            "datasource": "net",
+            "method": "get"
+        },
+        {
+            "datatype": "virtual_category_list",
+            "note": "获取虚拟分类列表",
+            "command": "/v5/media/categories/507",
+            "datasource": "net",
+            "type": "virtual_category_list",
+            "method": "get"
+        },
+        {
+            "datatype": "activity_list",
+            "note": "新版获得活动列表",
+            "command": "/v6/media/activities",
+            "datasource": "net",
+            "type": "activity_list",
+            "method": "get"
+        },
+        {
+            "datatype": "current_program_topics",
+            "note": "新版获取当前节目话题列表",
+            "command": "/v5/media/topics/{id}?current_time={current_time}",
+            "datasource": "net",
+            "type": "current_program_topics",
+            "method": "get"
+        },
+        {
+            "datatype": "billboard_channel",
+            "note": "热门电台榜单",
+            "command": "/v5/media/billboards/{type}",
+            "datasource": "net",
+            "type": "billboard_channel",
+            "method": "get"
+        },
+        {
+            "datatype": "billboard_program",
+            "note": "热门节目榜单",
+            "command": "/v5/media/billboards/{type}",
+            "datasource": "net",
+            "type": "billboard_program",
+            "method": "get"
+        },
+        {
+            "datatype": "insert_favourite_channels",
+            "note": "新版插入收藏频道",
+            "command": "insert_favourite_channels",
+            "datasource": "FavouriteChannelDS",
+            "type": "insert_favourite_channels",
+            "method": "get"
+        },
+        {
+            "datatype": "get_favourite_channels",
+            "note": "新版获取所有收藏频道",
+            "command": "get_favourite_channels",
+            "datasource": "FavouriteChannelDS",
+            "type": "get_favourite_channels",
+            "method": "get"
+        },
+        {
+            "datatype": "delete_favourite_channels",
+            "note": "新版删除收藏频道",
+            "command": "delete_favourite_channels",
+            "datasource": "FavouriteChannelDS",
+            "type": "delete_favourite_channels",
+            "method": "get"
+        },
+        {
+            "datatype": "update_favourite_channels",
+            "note": "新版更新收藏频道",
+            "command": "update_favourite_channels",
+            "datasource": "FavouriteChannelDS",
+            "type": "update_favourite_channels",
+            "method": "get"
+        },
+        {
+            "datatype": "insertdb_common_record",
+            "note": "新版插入基础类型记录",
+            "command": "insertdb_common_record",
+            "datasource": "CommonDS",
+            "type": "insertdb_common_record",
+            "method": "get"
+        },
+        {
+            "datatype": "getdb_common_record",
+            "note": "新版获取基础类型记录",
+            "command": "getdb_common_record",
+            "datasource": "CommonDS",
+            "type": "getdb_common_record",
+            "method": "get"
+        },
+        {
+            "datatype": "deletedb_common_record",
+            "note": "新版删除基础类型记录",
+            "command": "deletedb_common_record",
+            "datasource": "CommonDS",
+            "type": "deletedb_common_record",
+            "method": "get"
+        },
+        {
+            "datatype": "updatedb_common_record",
+            "note": "新版更新基础类型记录",
+            "command": "updatedb_common_record",
+            "datasource": "CommonDS",
+            "type": "updatedb_common_record",
+            "method": "get"
+        },
+        {
+            "datatype": "updatedb_common_grouprecord",
+            "note": "新版更新基础类型记录",
+            "command": "updatedb_common_grouprecord",
+            "datasource": "CommonDS",
+            "type": "updatedb_common_grouprecord",
+            "method": "get"
+        },
+        {
+            "datatype": "insertdb_alarm_info",
+            "note": "新版插入闹铃",
+            "command": "insertdb_alarm_info",
+            "datasource": "AlarmDS",
+            "type": "insertdb_alarm_info",
+            "method": "get"
+        },
+        {
+            "datatype": "getdb_alarm_info",
+            "note": "新版获取闹铃",
+            "command": "getdb_alarm_info",
+            "datasource": "AlarmDS",
+            "type": "getdb_alarm_info",
+            "method": "get"
+        },
+        {
+            "datatype": "deletedb_alarm_info",
+            "note": "新版删除闹铃",
+            "command": "deletedb_alarm_info",
+            "datasource": "AlarmDS",
+            "type": "deletedb_alarm_info",
+            "method": "get"
+        },
+        {
+            "datatype": "UPDATEDB_MEDIA_CENTER",
+            "note": "新版更新数据中心",
+            "command": "UPDATEDB_MEDIA_CENTER",
+            "datasource": "mediaCenterDS",
+            "type": "UPDATEDB_MEDIA_CENTER",
+            "method": "get"
+        },
+        {
+            "datatype": "GETDB_MEDIA_CENTER",
+            "note": "新版获取数据中心",
+            "command": "GETDB_MEDIA_CENTER",
+            "datasource": "mediaCenterDS",
+            "type": "GETDB_MEDIA_CENTER",
+            "method": "get"
+        },
+        {
+            "datatype": "DELETEDB_MEDIA_CENTER",
+            "note": "新版删除数据中心",
+            "command": "DELETEDB_MEDIA_CENTER",
+            "datasource": "mediaCenterDS",
+            "type": "DELETEDB_MEDIA_CENTER",
+            "method": "get"
+        },
+        {
+            "datatype": "getdb_im_group_contacts",
+            "note": "新版获取群组联系记录",
+            "command": "getdb_im_group_contacts",
+            "datasource": "IMContactsDS",
+            "type": "getdb_im_group_contacts",
+            "method": "get"
+        },
+        {
+            "datatype": "getdb_im_user_contacts",
+            "note": "新版获取联系人记录",
+            "command": "getdb_im_user_contacts",
+            "datasource": "IMContactsDS",
+            "type": "getdb_im_user_contacts",
+            "method": "get"
+        },
+        {
+            "datatype": "updatedb_im_contacts",
+            "note": "新版更新联系人记录",
+            "command": "updatedb_im_contacts",
+            "datasource": "IMContactsDS",
+            "type": "updatedb_im_contacts",
+            "method": "get"
+        },
+        {
+            "datatype": "deletedb_im_contacts",
+            "note": "新版删除联系人记录",
+            "command": "deletedb_im_contacts",
+            "datasource": "IMContactsDS",
+            "type": "deletedb_im_contacts",
+            "method": "get"
+        },
+        {
+            "datatype": "insertdb_im_contacts",
+            "note": "新版插入联系人记录",
+            "command": "insertdb_im_contacts",
+            "datasource": "IMContactsDS",
+            "type": "insertdb_im_contacts",
+            "method": "get"
+        },
+        
+        {
+            "datatype": "insert_reserve_program",
+            "note": "新版插入预约记录",
+            "command": "insert_reserve_program",
+            "datasource": "ReserveProgramDS",
+            "type": "insert_reserve_program",
+            "method": "get"
+        },
+        {
+            "datatype": "delete_reserve_program",
+            "note": "新版删除预约记录",
+            "command": "delete_reserve_program",
+            "datasource": "ReserveProgramDS",
+            "type": "delete_reserve_program",
+            "method": "get"
+        },
+        {
+            "datatype": "get_reserve_program",
+            "note": "新版获取预约记录",
+            "command": "get_reserve_program",
+            "datasource": "ReserveProgramDS",
+            "type": "get_reserve_program",
+            "method": "get"
+        },
+        {
+            "datatype": "insertdb_play_history",
+            "note": "新版插入收听记录",
+            "command": "insertdb_play_history",
+            "datasource": "PlayHistoryDS",
+            "type": "insertdb_play_history",
+            "method": "get"
+        },
+        {
+            "datatype": "delinsertdb_play_history",
+            "note": "新版先删除再插入收听记录",
+            "command": "delinsertdb_play_history",
+            "datasource": "PlayHistoryDS",
+            "type": "delinsertdb_play_history",
+            "method": "get"
+        },
+        {
+            "datatype": "deletedb_play_history",
+            "note": "新版删除收听记录",
+            "command": "deletedb_play_history",
+            "datasource": "PlayHistoryDS",
+            "type": "deletedb_play_history",
+            "method": "get"
+        },
+        {
+            "datatype": "getdb_play_history",
+            "note": "新版获取收听记录",
+            "command": "getdb_play_history",
+            "datasource": "PlayHistoryDS",
+            "type": "getdb_play_history",
+            "method": "get"
+        },
+        {
+            "datatype": "insertdb_pull_config",
+            "note": "新版插入推送记录",
+            "command": "insertdb_pull_config",
+            "datasource": "PullMsgConfigDS",
+            "type": "insertdb_pull_config",
+            "method": "get"
+        },
+        {
+            "datatype": "updatedb_pull_config",
+            "note": "新版更新推送记录",
+            "command": "updatedb_pull_config",
+            "datasource": "PullMsgConfigDS",
+            "type": "updatedb_pull_config",
+            "method": "get"
+        },
+        {
+            "datatype": "deletedb_pull_config",
+            "note": "新版删除推送记录",
+            "command": "deletedb_pull_config",
+            "datasource": "PullMsgConfigDS",
+            "type": "deletedb_pull_config",
+            "method": "get"
+        },
+        {
+            "datatype": "getdb_pull_config",
+            "note": "新版获取推送记录",
+            "command": "getdb_pull_config",
+            "datasource": "PullMsgConfigDS",
+            "type": "getdb_pull_config",
+            "method": "get"
+        },
+        {
+            "datatype": "insertdb_pullmsgstate",
+            "note": "新版插入推送消息",
+            "command": "insertdb_pullmsgstate",
+            "datasource": "PullMsgStateDS",
+            "type": "insertdb_pullmsgstate",
+            "method": "get"
+        },
+        {
+            "datatype": "updatedb_pullmsgstate",
+            "note": "新版更新推送消息",
+            "command": "updatedb_pullmsgstate",
+            "datasource": "PullMsgStateDS",
+            "type": "updatedb_pullmsgstate",
+            "method": "get"
+        },
+        {
+            "datatype": "deletedb_pullmsgstate",
+            "note": "新版删除推送消息",
+            "command": "deletedb_pullmsgstate",
+            "datasource": "PullMsgStateDS",
+            "type": "deletedb_pullmsgstate",
+            "method": "get"
+        },
+        {
+            "datatype": "getdb_pullmsgstate",
+            "note": "新版获取推送消息",
+            "command": "getdb_pullmsgstate",
+            "datasource": "PullMsgStateDS",
+            "type": "getdb_pullmsgstate",
+            "method": "get"
+        },
+        {
+            "datatype": "get_current_playing_programs",
+            "note": "直播电台子分类列表",
+            "command": "/v6/media/livechannelplaying?ids={ids}&current_time={current_time}",
+            "datasource": "net",
+            "type": "get_current_playing_programs",
+            "method": "get"
+        },
+        {
+            "datatype": "insertdb_content_category",
+            "note": "插入内容结点",
+            "command": "insertdb_content_category",
+            "datasource": "ContentCategoryDS",
+            "type": "insertdb_content_category",
+            "method": "get"
+        },
+        {
+            "datatype": "getdb_content_category",
+            "note": "获取内容结点",
+            "command": "getdb_content_category",
+            "datasource": "ContentCategoryDS",
+            "type": "getdb_content_category",
+            "method": "get"
+        },
+        {
+            "datatype": "insertdb_playedmeta",
+            "note": "插入节目播放信息",
+            "command": "insertdb_playedmeta",
+            "datasource": "PlayedMetaDS",
+            "type": "insertdb_playedmeta",
+            "method": "get"
+        },
+        {
+            "datatype": "getdb_playedmeta",
+            "note": "获取节目播放信息",
+            "command": "getdb_playedmeta",
+            "datasource": "PlayedMetaDS",
+            "type": "getdb_playedmeta",
+            "method": "get"
+        },
+        {
+            "datatype": "updatedb_playedmeta",
+            "note": "更新节目播放信息",
+            "command": "updatedb_playedmeta",
+            "datasource": "PlayedMetaDS",
+            "type": "updatedb_playedmeta",
+            "method": "get"
+        },
+        {
+            "datatype": "deletedb_playedmeta",
+            "note": "删除节目播放信息",
+            "command": "deletedb_playedmeta",
+            "datasource": "PlayedMetaDS",
+            "type": "deletedb_playedmeta",
+            "method": "get"
+        },
+        {
+            "datatype": "insertdb_playlist",
+            "note": "插入播放列表结点",
+            "command": "insertdb_playlist",
+            "datasource": "PlayListDS",
+            "type": "insertdb_playlist",
+            "method": "get"
+        },
+        {
+            "datatype": "getdb_playlist",
+            "note": "获取播放列表结点",
+            "command": "getdb_playlist",
+            "datasource": "PlayListDS",
+            "type": "getdb_playlist",
+            "method": "get"
+        },
+        {
+            "datatype": "updatedb_playlist",
+            "note": "更新播放列表结点",
+            "command": "updatedb_playlist",
+            "datasource": "PlayListDS",
+            "type": "updatedb_playlist",
+            "method": "get"
+        },
+        {
+            "datatype": "insertdb_billboarditem",
+            "note": "插入榜单结点",
+            "command": "insertdb_billboarditem",
+            "datasource": "BillboardNodeDS",
+            "type": "insertdb_billboarditem",
+            "method": "get"
+        },
+        {
+            "datatype": "getdb_billboarditem",
+            "note": "获取榜单结点",
+            "command": "getdb_billboarditem",
+            "datasource": "BillboardNodeDS",
+            "type": "getdb_billboarditem",
+            "method": "get"
+        },
+        {
+            "datatype": "updatedb_billboarditem",
+            "note": "更新榜单结点",
+            "command": "updatedb_billboarditem",
+            "datasource": "BillboardNodeDS",
+            "type": "updatedb_billboarditem",
+            "method": "get"
+        },
+        {
+            "datatype": "insertdb_allfav_node",
+            "note": "插入所有喜爱分类结点",
+            "command": "insertdb_allfav_node",
+            "datasource": "AllFavCategoryDS",
+            "type": "insertdb_allfav_node",
+            "method": "get"
+        },
+        {
+            "datatype": "getdb_allfav_node",
+            "note": "获取所有喜爱分类结点",
+            "command": "getdb_allfav_node",
+            "datasource": "AllFavCategoryDS",
+            "type": "getdb_allfav_node",
+            "method": "get"
+        },
+        {
+            "datatype": "updatedb_allfav_node",
+            "note": "更新所有喜爱分类结点",
+            "command": "updatedb_allfav_node",
+            "datasource": "AllFavCategoryDS",
+            "type": "updatedb_allfav_node",
+            "method": "get"
+        },        
+        {
+            "datatype": "insertdb_category_node",
+            "note": "插入分类结点",
+            "command": "insertdb_category_node",
+            "datasource": "CategoryNodeDS",
+            "type": "insertdb_category_node",
+            "method": "get"
+        },
+        {
+            "datatype": "getdb_category_node",
+            "note": "获取分类结点",
+            "command": "getdb_category_node",
+            "datasource": "CategoryNodeDS",
+            "type": "getdb_category_node",
+            "method": "get"
+        },
+        {
+            "datatype": "updatedb_category_node",
+            "note": "更新分类结点",
+            "command": "updatedb_category_node",
+            "datasource": "CategoryNodeDS",
+            "type": "updatedb_category_node",
+            "method": "get"
+        },
+        {
+            "datatype": "INSERTDB_CHANNEL_NODE",
+            "note": "插入电台结点",
+            "command": "INSERTDB_CHANNEL_NODE",
+            "datasource": "ChannelNodesDS",
+            "type": "INSERTDB_CHANNEL_NODE",
+            "method": "get"
+        },
+        {
+            "datatype": "GETDB_CHANNEL_INFO",
+            "note": "获取单个电台结点信息",
+            "command": "GETDB_CHANNEL_INFO",
+            "datasource": "ChannelNodesDS",
+            "type": "GETDB_CHANNEL_INFO",
+            "method": "get"
+        },        
+        {
+            "datatype": "GETDB_CHANNEL_NODE",
+            "note": "获取电台结点",
+            "command": "GETDB_CHANNEL_NODE",
+            "datasource": "ChannelNodesDS",
+            "type": "GETDB_CHANNEL_NODE",
+            "method": "get"
+        },
+        {
+            "datatype": "DELETEDB_CHANNEL_NODE",
+            "note": "删除电台结点",
+            "command": "DELETEDB_CHANNEL_NODE",
+            "datasource": "ChannelNodesDS",
+            "type": "DELETEDB_CHANNEL_NODE",
+            "method": "get"
+        },
+        {
+            "datatype": "UPDATEDB_CHANNEL_NODE",
+            "note": "更新电台结点",
+            "command": "UPDATEDB_CHANNEL_NODE",
+            "datasource": "ChannelNodesDS",
+            "type": "UPDATEDB_CHANNEL_NODE",
+            "method": "get"
+        },
+        {
+            "datatype": "UPDATEDB_A_CHANNEL_NODE",
+            "note": "更新单个电台结点",
+            "command": "UPDATEDB_A_CHANNEL_NODE",
+            "datasource": "ChannelNodesDS",
+            "type": "UPDATEDB_A_CHANNEL_NODE",
+            "method": "get"
+        },        
+        {
+            "datatype": "insertdb_downloading_program_node",
+            "note": "插入直播节目结点",
+            "command": "insertdb_downloading_program_node",
+            "datasource": "DownloadingProgramDS",
+            "type": "insertdb_downloading_program_node",
+            "method": "get"
+        },
+        {
+            "datatype": "getdb_downloading_program_node",
+            "note": "获取直播节目结点",
+            "command": "getdb_downloading_program_node",
+            "datasource": "DownloadingProgramDS",
+            "type": "getdb_downloading_program_node",
+            "method": "get"
+        },
+        {
+            "datatype": "deletedb_downloading_program_node",
+            "note": "删除直播节目结点",
+            "command": "deletedb_downloading_program_node",
+            "datasource": "DownloadingProgramDS",
+            "type": "deletedb_downloading_program_node",
+            "method": "get"
+        },
+        {
+            "datatype": "updatedb_downloading_program_node",
+            "note": "更新直播节目结点",
+            "command": "updatedb_downloading_program_node",
+            "datasource": "DownloadingProgramDS",
+            "type": "updatedb_downloading_program_node",
+            "method": "get"
+        },
+      {
+            "datatype": "insertdb_predownloading_program_node",
+            "note": "插入直播节目结点",
+            "command": "insertdb_predownloading_program_node",
+            "datasource": "PreDownloadingProgramDS",
+            "type": "insertdb_predownloading_program_node",
+            "method": "get"
+        },
+        {
+            "datatype": "getdb_predownloading_program_node",
+            "note": "获取直播节目结点",
+            "command": "getdb_predownloading_program_node",
+            "datasource": "PreDownloadingProgramDS",
+            "type": "getdb_predownloading_program_node",
+            "method": "get"
+        },
+        {
+            "datatype": "deletedb_predownloading_program_node",
+            "note": "删除直播节目结点",
+            "command": "deletedb_predownloading_program_node",
+            "datasource": "PreDownloadingProgramDS",
+            "type": "deletedb_predownloading_program_node",
+            "method": "get"
+        },
+        {
+            "datatype": "updatedb_predownloading_program_node",
+            "note": "更新直播节目结点",
+            "command": "updatedb_predownloading_program_node",
+            "datasource": "PreDownloadingProgramDS",
+            "type": "updatedb_predownloading_program_node",
+            "method": "get"
+        },        
+        {
+            "datatype": "insertdb_program_node",
+            "note": "插入直播节目结点",
+            "command": "insertdb_program_node",
+            "datasource": "ProgramNodesDS",
+            "type": "insertdb_program_node",
+            "method": "get"
+        },
+        {
+            "datatype": "getdb_program_node",
+            "note": "获取直播节目结点",
+            "command": "getdb_program_node",
+            "datasource": "ProgramNodesDS",
+            "type": "getdb_program_node",
+            "method": "get"
+        },
+        {
+            "datatype": "deletedb_program_node",
+            "note": "删除直播节目结点",
+            "command": "deletedb_program_node",
+            "datasource": "ProgramNodesDS",
+            "type": "deletedb_program_node",
+            "method": "get"
+        },
+        {
+            "datatype": "updatedb_program_node",
+            "note": "更新直播节目结点",
+            "command": "updatedb_program_node",
+            "datasource": "ProgramNodesDS",
+            "type": "updatedb_program_node",
+            "method": "get"
+        },
+                {
+            "datatype": "insertdb_share_table",
+            "note": "插入分享数据",
+            "command": "insertdb_share_table",
+            "datasource": "ShareDS",
+            "type": "insertdb_share_table",
+            "method": "get"
+        },
+        {
+            "datatype": "getdb_share_table",
+            "note": "获取分享数据",
+            "command": "getdb_share_table",
+            "datasource": "ShareDS",
+            "type": "getdb_share_table",
+            "method": "get"
+        },
+        {
+            "datatype": "deletedb_share_table",
+            "note": "删除分享数据",
+            "command": "deletedb_share_table",
+            "datasource": "ShareDS",
+            "type": "deletedb_share_table",
+            "method": "get"
+        },
+        {
+            "datatype": "updatedb_share_table",
+            "note": "更新分享数据",
+            "command": "updatedb_share_table",
+            "datasource": "ShareDS",
+            "type": "updatedb_share_table",
+            "method": "get"
+        },        
+        {
+            "datatype": "insertdb_reccategory_node",
+            "note": "插入推荐category",
+            "command": "insertdb_reccategory_node",
+            "datasource": "RecommendCategoryNodeDS",
+            "type": "insertdb_reccategory_node",
+            "method": "get"
+        },
+        {
+            "datatype": "getdb_reccategory_node",
+            "note": "获取推荐category",
+            "command": "getdb_reccategory_node",
+            "datasource": "RecommendCategoryNodeDS",
+            "type": "getdb_reccategory_node",
+            "method": "get"
+        },
+        {
+            "datatype": "deletedb_reccategory_node",
+            "note": "删除推荐category",
+            "command": "deletedb_reccategory_node",
+            "datasource": "RecommendCategoryNodeDS",
+            "type": "deletedb_reccategory_node",
+            "method": "get"
+        },
+        {
+            "datatype": "updatedb_reccategory_node",
+            "note": "update推荐category",
+            "command": "updatedb_reccategory_node",
+            "datasource": "RecommendCategoryNodeDS",
+            "type": "updatedb_reccategory_node",
+            "method": "get"
+        },
+        
+        {
+            "datatype": "insertdb_frontpage_node",
+            "note": "插入推荐首页结点",
+            "command": "insertdb_frontpage_node",
+            "datasource": "FrontPageNodeDS",
+            "type": "insertdb_frontpage_node",
+            "method": "get"
+        },
+        {
+            "datatype": "getdb_frontpage_node",
+            "note": "获取推荐首页结点",
+            "command": "getdb_frontpage_node",
+            "datasource": "FrontPageNodeDS",
+            "type": "getdb_frontpage_node",
+            "method": "get"
+        },
+        {
+            "datatype": "deletedb_frontpage_node",
+            "note": "删除推荐首页结点",
+            "command": "deletedb_frontpage_node",
+            "datasource": "FrontPageNodeDS",
+            "type": "deletedb_frontpage_node",
+            "method": "get"
+        },
+        {
+            "datatype": "delinsertdb_frontpage_node",
+            "note": "先删除再插入推荐首页结点",
+            "command": "delinsertdb_frontpage_node",
+            "datasource": "FrontPageNodeDS",
+            "type": "delinsertdb_frontpage_node",
+            "method": "get"
+        },
+        {
+            "datatype": "virtual_program_info",
+            "commandparamencode": "UTF-8",
+            "note": "虚拟节目信息",
+            "command": "/v5/media/programs/{id}",
+            "datasource": "net",
+            "type": "virtual_program_info",
+            "method": "get"
+        },       
+        {
+            "datatype": "hot_search_keywords",
+            "commandparamencode": "UTF-8",
+            "note": "新搜索",
+            "command": "/api/newsearch/hotkeywords",
+            "datasource": "net",
+            "type": "hot_search_keywords",
+            "method": "get",
+            "roots": [
+                {
+                    "root": "http://search.qingting.fm"
+                },
+                {
+                    "root": "http://42.120.60.147"
+                },
+                {
+                    "root": "http://42.96.248.246"
+                }
+                
+            ]
+        },        
+        {
+            "datatype": "new_search",
+            "commandparamencode": "UTF-8",
+            "note": "新搜索",
+            "command": "/api/newsearch/findvt?k={k}&groups={groups}&type=newcms&curpage={curpage}&pagesize={pagesize}&deviceid={deviceid}&city={city}",
+            "datasource": "net",
+            "type": "new_search",
+            "method": "get",
+            "roots": [
+                {
+                    "root": "http://search.qingting.fm"
+                },
+                {
+                    "root": "http://42.120.60.147"
+                },
+                {
+                    "root": "http://42.96.248.246"
+                }                
+            ]
+        },
+        {
+            "datatype": "search",
+            "commandparamencode": "UTF-8",
+            "note": "新搜索提示",
+            "command": "/api/newsearch/findvt?k={k}&groups={groups}&type=newcms&curpage={curpage}&pagesize={pagesize}&deviceid={deviceid}&city={city}",
+            "datasource": "net",
+            "type": "new_search_suggestion",
+            "method": "get",
+            "roots": [
+                {
+                    "root": "http://search.qingting.fm"
+                },
+                {
+                    "root": "http://42.120.60.147"
+                },
+                {
+                    "root": "http://42.96.248.246"
+                }
+            ]
+        },
+        {
+            "datatype": "notificationlist",
+            "note": "获得推送列表",
+            "command": "getNotify",
+            "datasource": "Notify",
+            "type": "get_notification_list",
+            "method": "get"
+        },
+        {
+            "datatype": "notificationlist",
+            "note": "更新推送列表",
+            "command": "updateNotify",
+            "datasource": "Notify",
+            "type": "update_notification_list",
+            "method": "get"
+        },
+        {
+            "datatype": "google_location",
+            "note": "定位服务",
+            "command": "/maps/api/geocode/xml?latlng={lat},{long}&sensor=true&oe=utf-8&language=zh-CN",
+            "datasource": "net",
+            "type": "google_location",
+            "method": "get",
+            "roots": [
+                {
+                    "root": "http://maps.googleapis.com"
+                }
+            ]
+        },
+        {
+            "datatype": "send_comment",
+            "note": "发送评论",
+            "command": "/api/member/comments",
+            "datasource": "net",
+            "type": "send_comment",
+            "method": "post"
+        },
+        {
+            "datatype": "w_getuid",
+            "note": "获取用户UID",
+            "command": "account/get_uid.json",
+            "datasource": "weibo",
+            "type": "w_getuid",
+            "method": "GET"
+        },
+        {
+            "datatype": "search_topic",
+            "note": "搜索话题",
+            "command": "search/topics.json",
+            "datasource": "weibo",
+            "type": "search_topic",
+            "method": "GET"
+        },
+        {
+            "datatype": "search_topic",
+            "note": "搜索话题不解析",
+            "command": "search/topics.json",
+            "datasource": "weibo",
+            "type": "search_topic_noparser",
+            "method": "GET"
+        },
+        {
+            "datatype": "update_weibo_statues",
+            "note": "发布新微博",
+            "command": "statuses/update.json",
+            "datasource": "weibo",
+            "type": "update_weibo_statues",
+            "method": "POST"
+        },
+        {
+            "datatype": "update_weibo_statues",
+            "note": "发布新微博并上传图片",
+            "command": "statuses/upload.json",
+            "datasource": "weibo",
+            "type": "update_upload_statues",
+            "method": "POST"
+        },
+        {
+            "datatype": "creat_comments",
+            "note": "发布评论",
+            "command": "comments/create.json",
+            "datasource": "weibo",
+            "type": "creat_comments",
+            "method": "POST"
+        },
+        {
+            "datatype": "creat_comments",
+            "note": "回复评论",
+            "command": "comments/reply.json",
+            "datasource": "weibo",
+            "type": "reply_comments",
+            "method": "POST"
+        },
+        {
+            "datatype": "get_weibo_id",
+            "note": "获得用户发布的微博的id",
+            "command": "statuses/user_timeline/ids.json",
+            "datasource": "weibo",
+            "type": "get_weibo_id",
+            "method": "GET"
+        },
+        {
+            "datatype": "home_timeline",
+            "note": "获取当前登录用户及其所关注用户的最新微博",
+            "command": "statuses/home_timeline.json",
+            "datasource": "weibo",
+            "type": "home_timeline",
+            "method": "GET"
+        },
+        {
+            "datatype": "repost_weibo",
+            "note": "转发微博",
+            "command": "statuses/repost.json",
+            "datasource": "weibo",
+            "type": "repost_weibo",
+            "method": "POST"
+        },
+        {
+            "datatype": "bootstrap",
+            "note": "第一次启动时，获得clientid",
+            "command": "/api/bootstrap",
+            "datasource": "net",
+            "type": "bootstrap",
+            "method": "get",
+            "roots": [
+                {
+                    "root": "http://api.qingting.fm"
+                },
+                {
+                    "root": "http://42.120.60.147"
+                },
+                {
+                    "root": "http://42.96.248.246"
+                }
+            ]            
+            
+        },
+        {
+            "datatype": "activity_list",
+            "note": "更新活动",
+            "command": "updateActivities",
+            "datasource": "Notify",
+            "type": "update_activity_list",
+            "method": "get"
+        },
+        {
+            "datatype": "clientid",
+            "command": "getClientID",
+            "note": "获得存储在本地的clientid",
+            "type": "get_client_id",
+            "datasource": "Profile"
+        },
+        {
+            "datatype": "clientid",
+            "command": "updateClientID",
+            "note": "更新存储在本地的clientid",
+            "type": "update_client_id",
+            "datasource": "Profile"
+        },
+        {
+            "datatype": "topwid",
+            "note": "全局微博置顶贴",
+            "command": "/api/vbo/topwid/",
+            "datasource": "net",
+            "type": "topwid",
+            "method": "get",
+            "roots": [
+                {
+                    "root": "http://api.qingting.fm"
+                },
+                {
+                    "root": "http://42.120.60.147"
+                },
+                {
+                    "root": "http://42.96.248.246"
+                }
+            ]            
+            
+        },
+        {
+            "datatype": "uniad",
+            "note": "统一宣传用语",
+            "command": "/api/vbo/uniad/",
+            "datasource": "net",
+            "type": "uniad",
+            "method": "get",
+            "roots": [
+                {
+                    "root": "http://api.qingting.fm"
+                },
+                {
+                    "root": "http://42.120.60.147"
+                },
+                {
+                    "root": "http://42.96.248.246"
+                }
+            ]            
+            
+        },
+        {
+            "datatype": "status",
+            "note": "根据id读取微博",
+            "command": "statuses/show.json",
+            "datasource": "weibo",
+            "type": "status_show",
+            "method": "GET"
+        },
+        {
+            "datatype": "string",
+            "command": "getValue",
+            "note": "读取配置文件",
+            "type": "get_profile_value",
+            "datasource": "Profile"
+        },
+        {
+            "datatype": "string",
+            "command": "updateValue",
+            "note": "设置配置文件",
+            "type": "update_profile_value",
+            "datasource": "Profile"
+        },
+        {
+            "datatype": "accessToken",
+            "command": "get_location_AccessToken",
+            "note": "获得本地存储的accessToken",
+            "type": "get_location_accessToken",
+            "datasource": "weibo"
+        },
+        {
+            "datatype": "accessToken",
+            "command": "save_location_AccessToken",
+            "note": "accessToken记录到本地",
+            "type": "save_location_accessToken",
+            "datasource": "weibo"
+        },
+        {
+            "datatype": "accessToken",
+            "command": "delete_location_AccessToken",
+            "note": "删除本地的accessToken",
+            "type": "delete_location_accessToken",
+            "datasource": "weibo"
+        },
+        {
+            "datatype": "get_weibo",
+            "note": "获得指定用户发布的微博",
+            "command": "statuses/user_timeline.json",
+            "datasource": "weibo",
+            "type": "get_weibo",
+            "method": "GET"
+        },
+        {
+            "datatype": "get_weibo_userinfo",
+            "note": "指定用户ID获取用户信息",
+            "command": "users/show.json",
+            "datasource": "weibo",
+            "type": "get_weibo_userinfo",
+            "method": "GET"
+        },
+        {
+            "datatype": "get_weibo_comments",
+            "note": "获得指定微博的评论",
+            "command": "comments/show.json",
+            "datasource": "weibo",
+            "type": "get_weibo_comments",
+            "method": "GET"
+        },
+        {
+            "datatype": "add_weibo_friend",
+            "note": "加关注",
+            "command": "friendships/create.json",
+            "datasource": "weibo",
+            "type": "add_weibo_friend",
+            "method": "POST"
+        },
+        {
+            "datatype": "get_checkin_status",
+            "note": "获取节目签到值",
+            "command": "/api/qtradiov2/getcheckinstatus?pid={pid}&name={name}&type=program",
+            "datasource": "net",
+            "type": "get_checkin_status",
+            "method": "get",
+            "roots": [
+                {
+                    "root": "http://api.qingting.fm"
+                },
+                {
+                    "root": "http://42.120.60.147"
+                },
+                {
+                    "root": "http://42.96.248.246"
+                }
+            ]            
+            
+        },
+        {
+            "datatype": "set_checkin_status",
+            "note": "设置节目签到值",
+            "command": "/api/qtradiov2/checkin?id={id}&type=program&pid={pid}&name={name}",
+            "datasource": "net",
+            "type": "set_checkin_status",
+            "method": "post",
+            "roots": [
+                {
+                    "root": "http://api.qingting.fm"
+                },
+                {
+                    "root": "http://42.120.60.147"
+                },
+                {
+                    "root": "http://42.96.248.246"
+                }
+            ]            
+            
+        },
+        {
+            "datatype": "get_dj_flowers",
+            "note": "获取DJ鲜花值",
+            "command": "/api/qtradiov2/userinfo?id={id}",
+            "datasource": "net",
+            "type": "get_dj_flowers",
+            "method": "get",
+            "roots": [
+                {
+                    "root": "http://api.qingting.fm"
+                },
+                {
+                    "root": "http://42.120.60.147"
+                },
+                {
+                    "root": "http://42.96.248.246"
+                }
+            ]            
+            
+        },
+        {
+            "datatype": "set_dj_flowers",
+            "note": "设置DJ鲜花值",
+            "command": "/api/qtradiov2/digguser?id={id}&diggcount={diggcount}",
+            "datasource": "net",
+            "type": "set_dj_flowers",
+            "method": "post",
+            "roots": [
+                {
+                    "root": "http://api.qingting.fm"
+                },
+                {
+                    "root": "http://42.120.60.147"
+                },
+                {
+                    "root": "http://42.96.248.246"
+                }
+            ]            
+            
+        },
+        {
+            "datatype": "get_freq_channels",
+            "note": "硬件FM可用时获取所有城市的频点信息",
+            "command": "/v5/media/allfreqchannels",
+            "datasource": "net",
+            "type": "get_freq_channels",
+            "method": "get"
+        },
+        {
+            "datatype": "getdb_freq_channels",
+            "note": "硬件FM获取城市频点信息",
+            "command": "getdb_freq_channels",
+            "datasource": "FreqChannelsDS",
+            "type": "getdb_freq_channels",
+            "method": "get"
+        },
+        {
+            "datatype": "insertdb_freq_channels",
+            "note": "硬件FM插入城市频点信息",
+            "command": "insertdb_freq_channels",
+            "datasource": "FreqChannelsDS",
+            "type": "insertdb_freq_channels",
+            "method": "get"
+        },
+        {
+            "datatype": "deletedb_freq_channels",
+            "note": "硬件F删除城市频点信息",
+            "command": "deletedb_freq_channels",
+            "datasource": "FreqChannelsDS",
+            "type": "deletedb_freq_channels",
+            "method": "get"
+        },
+        {
+            "datatype": "get_radio_info",
+            "note": "硬件FM根据频点获取详细信息",
+            "command": "/api/qtradiov2/freqchannels?freq={freq}&country={country}&region={region}&city={city}",
+            "datasource": "net",
+            "type": "get_radio_info",
+            "method": "get",
+            "roots": [
+                {
+                    "root": "http://api.qingting.fm"
+                },
+                {
+                    "root": "http://42.120.60.147"
+                },
+                {
+                    "root": "http://42.96.248.246"
+                }
+            ]            
+            
+        },
+        {
+            "datatype": "getdb_radio_node",
+            "note": "硬件FM读取频点信息",
+            "command": "getdb_radio_node",
+            "datasource": "RadioNodesDS",
+            "type": "getdb_radio_node",
+            "method": "get"
+        },
+        {
+            "datatype": "insertdb_radio_node",
+            "note": "硬件FM插入频点信息",
+            "command": "insertdb_radio_node",
+            "datasource": "RadioNodesDS",
+            "type": "insertdb_radio_node",
+            "method": "get"
+        },
+        {
+            "datatype": "deletedb_radio_node",
+            "note": "硬件F删除频点信息",
+            "command": "deletedb_radio_node",
+            "datasource": "RadioNodesDS",
+            "type": "deletedb_radio_node",
+            "method": "get"
+        },
+        {
+            "datatype": "top_posts",
+            "note": "获取全局的微博置顶帖",
+            "command": "/api/vbo/topwidv2/",
+            "datasource": "net",
+            "type": "global_top_posts",
+            "method": "get"
+        },
+        {
+            "datatype": "get_signin_value",
+            "note": "获取签到数据",
+            "command": "get_signin_value",
+            "datasource": "weibo",
+            "type": "get_signin_value",
+            "method": "get"
+        },
+        {
+            "datatype": "post_fmfreqs",
+            "note": "获取FM匹配数据",
+            "command": "/api/channel/freqchannels?freq={freq}&country={country}&region={region}&city={city}",
+            "datasource": "net",
+            "type": "post_fmfreqs",
+            "method": "get",
+            "roots": [
+                {
+                    "root": "http://api.qingting.fm"
+                },
+                {
+                    "root": "http://42.120.60.147"
+                },
+                {
+                    "root": "http://42.96.248.246"
+                }
+            ]            
+            
+        },
+        {
+            "datatype": "get_ip_location",
+            "note": "通过ip获取地理位置",
+            "command": "",
+            "datasource": "net",
+            "type": "get_ip_location",
+            "method": "get",
+            "roots": [
+                {
+                    "root": "http://ip.qingting.fm"
+                }
+            ]
+        },
+        {
+            "datatype": "SearchBaisc",
+            "note": "得到所有记录",
+            "command": "getSearchHistroy",
+            "datasource": "Search",
+            "type": "getSearchHistroy",
+            "method": "get"
+        },
+        {
+            "datatype": "upgrade_online",
+            "note": "在线升级",
+            "command": "/api/bootstrap/upgradecheck?deviceid={deviceid}&version={version}&cpu={cpu}&mem={mem}&network={network}&sysver={sysver}&channel={channel}",
+            "datasource": "net",
+            "type": "upgrade_online",
+            "method": "get",
+            "roots": [
+                {
+                    "root": "http://api.qingting.fm"
+                },
+                {
+                    "root": "http://42.120.60.147"
+                },
+                {
+                    "root": "http://42.96.248.246"
+                }
+            ]            
+            
+        },
+        {
+            "datatype": "create_user",
+            "commandparamencode": "UTF-8",
+            "note": "在用户系统中注册用户",
+            "command": "/v2/user",
+            "datasource": "net",
+            "type": "create_user",
+            "method": "post",
+            "roots": [
+                {
+                    "root": "http://user.api.qingting.fm"
+                },
+                {
+                    "root": "http://112.124.11.2"
+                }
+            ]
+        },
+        {
+            "datatype": "set_user_data",
+            "commandparamencode": "UTF-8",
+            "note": "上传用户数据如收藏等",
+            "command": "/v2/user/{user}/attr/favchannels",
+            "datasource": "net",
+            "type": "set_user_data",
+            "method": "post",
+            "roots": [
+                {
+                    "root": "http://user.api.qingting.fm"
+                },
+                {
+                    "root": "http://112.124.11.2"
+                }
+            ]
+        },
+        {
+            "datatype": "report_user",
+            "commandparamencode": "UTF-8",
+            "note": "用户举报",
+            "command": "/u2/api/v1/report",
+            "datasource": "net",
+            "type": "report_user",
+            "method": "post",
+            "roots": [
+                {
+                    "root": "http://u2.qingting.fm"
+                },
+                {
+                    "root": "http://42.120.60.147"
+                }
+            ]
+        },        
+        {
+            "datatype": "pull_collection_data",
+            "commandparamencode": "UTF-8",
+            "note": "读取用户数据如收藏等",
+            "command": "/v2/user/{user}/getattr/favchannels",
+            "datasource": "net",
+            "type": "pull_collection_data",
+            "method": "get",
+            "roots": [
+                {
+                    "root": "http://user.api.qingting.fm"
+                },
+                {
+                    "root": "http://112.124.11.2"
+                }
+            ]
+        },                        
+        {
+            "datatype": "get_im_base_user_info",
+            "commandparamencode": "UTF-8",
+            "note": "更新用户信息",
+            "command": "/u2/api/v1/user/{user}/base",
+            "datasource": "net",
+            "type": "get_im_base_user_info",
+            "method": "get",
+            "roots": [
+                {
+                    "root": "http://u2.qingting.fm"
+                },
+                {
+                    "root": "http://42.120.60.147"
+                }
+            ]
+        },        
+        {
+            "datatype": "update_user_info",
+            "commandparamencode": "UTF-8",
+            "note": "更新用户信息",
+            "command": "/u2/api/v1/user/{user}",
+            "datasource": "net",
+            "type": "update_user_info",
+            "method": "post",
+            "roots": [
+                {
+                    "root": "http://u2.qingting.fm"
+                },
+                {
+                    "root": "http://42.120.60.147"
+                }
+            ]
+        },
+       {
+            "datatype": "GET_IM_HISTORY_FROM_SERVER",
+            "commandparamencode": "UTF-8",
+            "note": "获取群信息",
+            "command": "/u2/api/message/fetch?group={group}&fetchsize={fetchsize}",
+            "datasource": "net",
+            "type": "GET_IM_HISTORY_FROM_SERVER",
+            "method": "get",
+            "roots": [
+             	{
+                    "root": "http://u2.qingting.fm"
+                },
+                {
+                    "root": "http://121.199.38.37"
+                }        
+             ]
+        },                                
+       {
+            "datatype": "get_group_info",
+            "commandparamencode": "UTF-8",
+            "note": "获取群信息",
+            "command": "/u2/api/v1/group/{group}",
+            "datasource": "net",
+            "type": "get_group_info",
+            "method": "get",
+            "roots": [
+                {
+                    "root": "http://u2.qingting.fm"
+                },
+                {
+                    "root": "http://42.120.60.147"
+                }        
+             ]
+        },                        
+        {
+            "datatype": "get_group_users",
+            "commandparamencode": "UTF-8",
+            "note": "获取群用户列表",
+            "command": "/u2/api/v1/group/{group}/users/curpage/{curpage}/pagesize/{size}",
+            "datasource": "net",
+            "type": "get_group_users",
+            "method": "get",
+            "roots": [
+                {
+                    "root": "http://u2.qingting.fm"
+                },
+                {
+                    "root": "http://42.120.60.147"
+                }
+            ]
+        },                                
+        {
+            "datatype": "get_user_info",
+            "commandparamencode": "UTF-8",
+            "note": "获取用户信息",
+            "command": "/u2/api/v1/user/{user}",
+            "datasource": "net",
+            "type": "get_user_info",
+            "method": "get",
+            "roots": [
+                {
+                    "root": "http://u2.qingting.fm"
+                },
+                {
+                    "root": "http://42.120.60.147"
+                }
+            ]
+        },                
+        {
+            "datatype": "get_user_followers",
+            "commandparamencode": "UTF-8",
+            "note": "获取用户粉丝列表",
+            "command": "/u2/api/v1/user/{user}/followers",
+            "datasource": "net",
+            "type": "get_user_followers",
+            "method": "get",
+            "roots": [
+                {
+                    "root": "http://u2.qingting.fm"
+                },
+                {
+                    "root": "http://42.120.60.147"
+                }
+            ]
+        },
+        {
+            "datatype": "get_user_followings",
+            "commandparamencode": "UTF-8",
+            "note": "获取用户关注列表",
+            "command": "/u2/api/v1/user/{user}/followings",
+            "datasource": "net",
+            "type": "get_user_followings",
+            "method": "get",
+            "roots": [
+                {
+                    "root": "http://u2.qingting.fm"
+                },
+                {
+                    "root": "http://42.120.60.147"
+                }
+            ]
+        },                        
+        {
+            "datatype": "add_following",
+            "commandparamencode": "UTF-8",
+            "note": "加关注",
+            "command": "/u2/api/v1/user/{user}/follow/{following}",
+            "datasource": "net",
+            "type": "add_following",
+            "method": "post",
+            "roots": [
+                {
+                    "root": "http://u2.qingting.fm"
+                },
+                {
+                    "root": "http://42.120.60.147"
+                }
+            ]
+        },                        
+        {
+            "datatype": "cancel_following",
+            "commandparamencode": "UTF-8",
+            "note": "取消关注",
+            "command": "/u2/api/v1/user/{user}/unfollow/{unfollow}",
+            "datasource": "net",
+            "type": "cancel_following",
+            "method": "post",
+            "roots": [
+                {
+                    "root": "http://u2.qingting.fm"
+                },
+                {
+                    "root": "http://42.120.60.147"
+                }
+            ]
+        },                                                        
+        {
+            "datatype": "follow_group",
+            "commandparamencode": "UTF-8",
+            "note": "关注群",
+            "command": "/u2/api/v1/user/{user}/group/{group}/join",
+            "datasource": "net",
+            "type": "follow_group",
+            "method": "post",
+            "roots": [
+                {
+                    "root": "http://u2.qingting.fm"
+                },
+                {
+                    "root": "http://42.120.60.147"
+                }
+            ]
+        },                                                                
+        {
+            "datatype": "unfollow_group",
+            "commandparamencode": "UTF-8",
+            "note": "取消关注群",
+            "command": "/u2/api/v1/user/{user}/group/{group}/leave",
+            "datasource": "net",
+            "type": "unfollow_group",
+            "method": "post",
+            "roots": [
+                {
+                    "root": "http://u2.qingting.fm"
+                },
+                {
+                    "root": "http://42.120.60.147"
+                }
+            ]
+        },                                                                        
+        {
+            "datatype": "get_new_version_collection",
+            "note": "升级老版本收藏列表",
+            "command": "/api/qtradiov4/migratefavs?id={ids}",
+            "datasource": "net",
+            "type": "get_new_version_collection",
+            "method": "get"
+        },
+        {
+            "datatype": "get_coupon",
+            "commandparamencode": "UTF-8",
+            "note": "获得JD奖券",
+            "command": "/api/coupon/{ad}/draw?deviceid={deviceid}",
+            "datasource": "net",
+            "type": "get_coupon",
+            "method": "get",
+            "roots": [
+                {
+                    "root": "http://qd.api.qingting.fm"
+                },
+                {
+                    "root": "http://42.96.248.246"
+                }
+            ]
+        },
+        {
+            "datatype": "get_ad_infolist",
+            "commandparamencode": "UTF-8",
+            "note": "获取所有广告信息",
+            "command": "/api/coupon/info",
+            "datasource": "net",
+            "type": "get_ad_infolist",
+            "method": "get",
+            "roots": [
+                {
+                    "root": "http://qd.api.qingting.fm"
+                },
+                {
+                    "root": "http://42.96.248.246"
+                }
+            ]
+        },
+        {
+            "datatype": "post_recorded_voice",
+            "note": "上传录音",
+            "command": "/php/api.php?m=upload",
+            "datasource": "net",
+            "type": "post_recorded_voice",
+            "method": "post",
+            "roots": [
+                {
+                    "root": "http://upload2.qingting.fm"
+                }
+            ]
+        },
+        {
+            "datatype": "get_user_tids",
+            "note": "获取用户的身份",
+            "command": "/getdeviceid?num={num}",
+            "datasource": "net",
+            "type": "get_user_tids",
+            "method": "get",
+            "roots": [
+                {
+                    "root": "http://hz.api.qingting.fm"
+                },
+                {
+            		"root": "http://42.120.60.147"
+		        }                
+            ]
+        },
+        {
+            "datatype": "GET_IM_SERVER",
+            "note": "获取im服务器",
+            "command": "/node?from={from}",
+            "datasource": "net",
+            "type": "GET_IM_SERVER",
+            "method": "get",
+            "roots": [
+                {
+                    "root": "http://im.qingting.fm"
+                },
+                {
+                    "root":"http://112.124.38.202:8777"
+                },
+                {
+                    "root": "http://121.40.141.90"
+                },                
+                {
+                    "root": "http://121.40.94.111"
+                }                
+                                
+            ]
+        },  
+        {
+            "datatype": "get_jd_ad",
+            "note": "获取京东广告",
+            "command": "/adx/dragonfly",
+            "datasource": "net",
+            "type": "get_jd_ad",
+            "method": "post",
+            "roots": [
+                {
+                    "root": "http://cc.x.jd.com"
+                }
+            ]
+        },              
+        {
+            "datatype": "GET_CHANNEL_PROGRAM_UPDATE_TIME",
+            "note": "获取电台上次更新时间",
+            "command": "/api/qtradiov4/notification?id={id}",
+            "datasource": "net",
+            "type": "GET_CHANNEL_PROGRAM_UPDATE_TIME",
+            "method": "get",
+            "roots": [
+                {
+                    "root": "http://api.qingting.fm"
+                },
+                {
+                    "root": "http://42.120.60.147"
+                },
+                {
+                    "root": "http://42.96.248.246"
+                }
+            ] 
+        }
+    ]
+}

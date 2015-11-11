@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout android:orientation="horizontal" android:layout_width="fill_parent" android:layout_height="129.98999dip"
+  xmlns:android="http://schemas.android.com/apk/res/android">
+    <ImageView android:id="@id/ChannelCover" android:layout_width="120.0dip" android:layout_height="120.0dip" android:src="@drawable/qingting" android:scaleType="centerCrop" />
+    <LinearLayout android:gravity="center_vertical" android:orientation="horizontal" android:id="@id/playBtns" android:layout_width="fill_parent" android:layout_height="48.0dip" android:layout_toRightOf="@id/ChannelCover" android:layout_alignParentBottom="true">
+        <ImageView android:id="@id/playPre" android:clickable="true" android:layout_width="0.0dip" android:layout_height="fill_parent" android:layout_margin="1.3299866dip" android:src="@drawable/play_button_pre" android:scaleType="center" android:layout_weight="1.0" />
+        <ImageView android:id="@id/playView" android:clickable="true" android:layout_width="0.0dip" android:layout_height="fill_parent" android:layout_margin="1.3299866dip" android:src="@drawable/notificationplaybutton" android:scaleType="center" android:layout_weight="1.0" />
+        <ImageView android:id="@id/playNext" android:clickable="true" android:layout_width="0.0dip" android:layout_height="fill_parent" android:layout_margin="1.3299866dip" android:src="@drawable/play_button_next" android:scaleType="center" android:layout_weight="1.0" />
+    </LinearLayout>
+    <LinearLayout android:gravity="center_vertical" android:orientation="vertical" android:layout_width="wrap_content" android:layout_height="fill_parent" android:layout_marginLeft="10.0dip" android:layout_toRightOf="@id/ChannelCover" android:layout_above="@id/playBtns" android:layout_alignParentTop="true">
+        <TextView android:id="@id/iTitleView" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginBottom="5.0dip" android:singleLine="true" />
+        <TextView android:id="@id/iInfoView" android:layout_width="wrap_content" android:layout_height="wrap_content" android:singleLine="false" />
+    </LinearLayout>
+</RelativeLayout>

@@ -1,0 +1,32 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <color name="body_text_1">#ff000000</color>
+    <color name="body_text_2">#99000000</color>
+    <color name="body_text_disabled">#66000000</color>
+    <color name="body_text_1_inverse">#ffffffff</color>
+    <color name="body_text_2_inverse">#99ffffff</color>
+    <color name="accent_1">#ff29549f</color>
+    <color name="hyperlink">#ffff549f</color>
+    <color name="background_1">#ffffffff</color>
+    <color name="whats_on_separator">#4d000000</color>
+    <color name="all_track_color">#ff222222</color>
+    <color name="block_column_1">#ff0fabff</color>
+    <color name="block_column_2">#ffdf1831</color>
+    <color name="block_column_3">#ff009939</color>
+    <color name="textcolor_highlight">#ffe13430</color>
+    <color name="textcolor_normal">#ff272930</color>
+    <color name="textcolor_sub">#ff787878</color>
+    <color name="textcolor_selected">#ffededed</color>
+    <color name="textcolor_navi_button">#4cffffff</color>
+    <color name="bb_btn_text_color">#ffc9c9c9</color>
+    <color name="subheader_bg_color">#ffeaeaea</color>
+    <color name="actionbar_separator">#ff3a5fcd</color>
+    <color name="actionbar_background_start">#ff3a5fcd</color>
+    <color name="actionbar_background_end">#ff27408b</color>
+    <color name="actionbar_title">#ffffffff</color>
+    <color name="actionbar_background_item_pressed_start">#ffff7f00</color>
+    <color name="actionbar_background_item_pressed_end">#ffee7600</color>
+    <color name="default_circle_indicator_fill_color">#ffffffff</color>
+    <color name="default_circle_indicator_page_color">#00000000</color>
+    <color name="default_circle_indicator_stroke_color">#ffdddddd</color>
+</resources>

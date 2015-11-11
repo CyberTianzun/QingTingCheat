@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout android:orientation="horizontal" android:layout_width="fill_parent" android:layout_height="wrap_content"
+  xmlns:android="http://schemas.android.com/apk/res/android">
+    <RelativeLayout android:id="@id/logoContainer" android:layout_width="wrap_content" android:layout_height="fill_parent" android:layout_alignParentTop="true">
+        <ImageView android:id="@id/logoView" android:paddingLeft="8.0dip" android:paddingRight="8.0dip" android:layout_width="wrap_content" android:layout_height="wrap_content" android:src="@drawable/notification" android:layout_centerVertical="true" android:contentDescription="@string/todo" />
+    </RelativeLayout>
+    <RelativeLayout android:id="@id/nextContainer" android:layout_width="wrap_content" android:layout_height="fill_parent" android:layout_alignParentTop="true" android:layout_alignParentRight="true">
+        <ImageView android:id="@id/nextView" android:paddingLeft="8.0dip" android:paddingRight="10.0dip" android:clickable="true" android:layout_width="wrap_content" android:layout_height="wrap_content" android:src="@drawable/notificationnextbutton" android:layout_centerVertical="true" android:contentDescription="@string/todo" />
+    </RelativeLayout>
+    <RelativeLayout android:id="@id/playContainer" android:layout_width="wrap_content" android:layout_height="fill_parent" android:layout_toLeftOf="@id/nextContainer" android:layout_alignParentTop="true">
+        <ImageView android:id="@id/playView" android:paddingRight="8.0dip" android:clickable="true" android:layout_width="wrap_content" android:layout_height="wrap_content" android:src="@drawable/notificationplaybutton" android:layout_centerVertical="true" android:contentDescription="@string/todo" />
+    </RelativeLayout>
+    <LinearLayout android:orientation="vertical" android:id="@id/infoContainer" android:layout_width="fill_parent" android:layout_height="wrap_content" android:layout_toLeftOf="@id/playContainer" android:layout_toRightOf="@id/logoContainer">
+        <TextView android:textAppearance="?android:textAppearanceMedium" android:textSize="17.0sp" android:id="@id/titleView" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginTop="10.0dip" android:text="@string/app_name" android:singleLine="true" />
+        <TextView android:textSize="13.0sp" android:id="@id/infoView" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginBottom="9.0dip" android:text="@string/copyright" android:singleLine="true" />
+    </LinearLayout>
+</RelativeLayout>

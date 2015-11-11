@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout android:background="#ffffffff" android:layout_width="fill_parent" android:layout_height="wrap_content"
+  xmlns:android="http://schemas.android.com/apk/res/android">
+    <TextView android:textSize="20.0sp" android:textColor="#ff272830" android:gravity="center" android:id="@id/title" android:layout_width="fill_parent" android:layout_height="wrap_content" android:layout_marginTop="10.0dip" android:layout_marginBottom="10.0dip" android:text="发现新版本" android:layout_alignParentTop="true" />
+    <TextView android:textSize="16.0sp" android:textColor="#ff272830" android:id="@id/message" android:layout_width="fill_parent" android:layout_height="wrap_content" android:layout_marginLeft="20.0dip" android:layout_marginTop="10.0dip" android:layout_marginRight="20.0dip" android:layout_marginBottom="10.0dip" android:text="【新增】 群组功能\n【新增】 新增更新提示\n【优化】直播界面\n【优化】视觉细节" android:layout_below="@id/title" />
+    <LinearLayout android:orientation="horizontal" android:id="@id/buttons" android:paddingBottom="10.0dip" android:layout_width="fill_parent" android:layout_height="wrap_content" android:layout_marginTop="10.0dip" android:layout_marginBottom="10.0dip" android:layout_below="@id/message">
+        <TextView android:textSize="15.0sp" android:textColor="#ff272830" android:gravity="center" android:id="@id/cancel" android:background="@drawable/background_upgrade_button" android:paddingTop="10.0dip" android:paddingBottom="10.0dip" android:layout_width="0.0dip" android:layout_height="wrap_content" android:layout_margin="5.0dip" android:text="以后再说" android:layout_weight="7.0" />
+        <TextView android:textSize="15.0sp" android:textColor="#ff272830" android:gravity="center" android:id="@id/download" android:background="@drawable/background_upgrade_button" android:paddingTop="10.0dip" android:paddingBottom="10.0dip" android:layout_width="0.0dip" android:layout_height="wrap_content" android:layout_margin="5.0dip" android:text="立即下载" android:layout_weight="7.0" />
+        <RelativeLayout android:id="@id/quck_download" android:layout_width="0.0dip" android:layout_height="wrap_content" android:layout_margin="5.0dip" android:layout_weight="9.0">
+            <RelativeLayout android:gravity="center" android:background="@drawable/background_upgrade_button_highlight" android:layout_width="fill_parent" android:layout_height="wrap_content">
+                <TextView android:textSize="15.0sp" android:textColor="#ffc13430" android:gravity="center" android:id="@id/text" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginTop="20.0dip" android:layout_marginBottom="20.0dip" android:text="省流量更新" />
+                <ImageView android:id="@id/update_recommend" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginLeft="2.0dip" android:layout_marginTop="15.0dip" android:src="@drawable/update_recommend" android:layout_toRightOf="@id/text" />
+            </RelativeLayout>
+        </RelativeLayout>
+    </LinearLayout>
+</RelativeLayout>

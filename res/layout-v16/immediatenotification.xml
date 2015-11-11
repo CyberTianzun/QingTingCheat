@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout android:orientation="horizontal" android:layout_width="fill_parent" android:layout_height="wrap_content"
+  xmlns:android="http://schemas.android.com/apk/res/android">
+    <RelativeLayout android:id="@id/iLogoContainer" android:layout_width="wrap_content" android:layout_height="fill_parent" android:layout_alignParentTop="true">
+        <ImageView android:id="@id/iLogoView" android:paddingLeft="8.0dip" android:paddingRight="8.0dip" android:layout_width="wrap_content" android:layout_height="wrap_content" android:src="@drawable/notification" android:layout_centerVertical="true" android:contentDescription="@string/todo" />
+    </RelativeLayout>
+    <RelativeLayout android:id="@id/iPlayContainer" android:layout_width="wrap_content" android:layout_height="fill_parent" android:layout_alignParentTop="true" android:layout_alignParentRight="true">
+        <ImageView android:id="@id/iPlayView" android:paddingRight="8.0dip" android:clickable="true" android:layout_width="wrap_content" android:layout_height="wrap_content" android:src="@drawable/notificationplaybutton" android:layout_centerVertical="true" android:contentDescription="@string/todo" />
+    </RelativeLayout>
+    <LinearLayout android:orientation="vertical" android:id="@id/iInfoContainer" android:layout_width="fill_parent" android:layout_height="wrap_content" android:layout_toLeftOf="@id/iPlayContainer" android:layout_toRightOf="@id/iLogoContainer">
+        <TextView android:textAppearance="?android:textAppearanceMedium" android:id="@id/iTitleView" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginTop="10.0dip" android:text="@string/app_name" android:singleLine="true" />
+        <TextView android:id="@id/iInfoView" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginBottom="10.0dip" android:text="@string/copyright" android:singleLine="false" />
+    </LinearLayout>
+</RelativeLayout>

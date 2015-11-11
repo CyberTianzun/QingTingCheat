@@ -1,0 +1,13 @@
+version: 1.5.2
+apkFileName: QingTing.apk
+isFrameworkApk: false
+usesFramework:
+  ids:
+  - 1
+sdkInfo:
+  minSdkVersion: '12'
+  targetSdkVersion: '17'
+packageInfo:
+  cur_package: fm.qingting.qtradio
+  orig_package: fm.qingting.qtradio
+compressionType: false

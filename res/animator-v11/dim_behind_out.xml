@@ -1,0 +1,3 @@
+<?xml version="1.0" encoding="utf-8"?>
+<objectAnimator android:interpolator="@interpolator/accelerate_quad" android:duration="@integer/config_animTimeDefault" android:valueFrom="@integer/config_alpha_end" android:valueTo="@integer/config_alpha_start" android:valueType="intType" android:propertyName="alpha"
+  xmlns:android="http://schemas.android.com/apk/res/android" />
